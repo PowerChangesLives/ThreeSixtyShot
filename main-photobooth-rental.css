@@ -52,7 +52,8 @@ main {
 .card-title {
     font-size: 20px;
     font-weight: bold;
-    margin: 10px 0
+    margin: 10px 0;
+    text-align: center; /* Center the title */
 }
 
 .card-text {
@@ -73,15 +74,13 @@ main {
     margin: auto;
     border: #9e8a78;
     position: relative;
+    text-align: center; /* Center the text */
+    line-height: 45px; /* Vertically center the text */
+    text-decoration: none !important; /* Remove underline */
 }
 
 .rental-button:hover {
     filter: brightness(80%);
-}
-
-.button-link {
-    text-decoration: none;
-    color: #fbfbfb;
 }
 
 .image-section {
