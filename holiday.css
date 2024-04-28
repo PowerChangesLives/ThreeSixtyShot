@@ -1,6 +1,7 @@
+/* Default styling for the image section */
 .image-section {
   position: relative;
-  background-image: url('image-placeholder.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-image: url('image-placeholder.png');
   background-size: cover;
   background-position: center;
   height: 400px; /* Adjust the height as needed */
@@ -11,6 +12,7 @@
   text-align: center;
 }
 
+/* Styling for the content within the image section */
 .image-section .content {
   max-width: 80%; /* Limit content width */
 }
@@ -23,3 +25,12 @@
 .image-section .content p {
   font-size: 18px;
 }
+
+/* Media queries for responsiveness */
+  
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .image-section {
+      height: 600px; /* Adjust height for desktop */
+    }
+  }
