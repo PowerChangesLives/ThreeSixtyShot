@@ -1,8 +1,7 @@
-/* main.css */
-
+/* Default styling for the image section */
 .image-section {
   position: relative;
-  background-image: url('image-placeholder.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-image: url('image-placeholder.png');
   background-size: cover;
   background-position: center;
   height: 400px; /* Adjust the height as needed */
@@ -13,12 +12,9 @@
   text-align: center;
 }
 
+/* Styling for the content within the image section */
 .image-section .content {
   max-width: 80%; /* Limit content width */
-  position: absolute; /* Position the content absolutely */
-  top: 50%; /* Align the top of the content to the vertical center */
-  left: 50%; /* Align the left of the content to the horizontal center */
-  transform: translate(-50%, -50%); /* Adjust position to center */
 }
 
 .image-section .content h2 {
@@ -31,4 +27,25 @@
   margin-bottom: 20px; /* Add margin to separate paragraphs */
 }
 
-
+/* Media queries for responsiveness */
+  
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .image-section {
+      height: 600px; /* Adjust height for desktop */
+    }
+  }
+  
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .image-section {
+      height: 500px; /* Adjust height for tablet */
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 767px) {
+    .image-section {
+      height: auto; /* Adjust height for mobile */
+    }
+  }
