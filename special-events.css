@@ -1,0 +1,29 @@
+/* special-event.css -For Special Events Photobooth Rental*/
+
+.image-section {
+  position: relative;
+  background-image: url('image-placeholder.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust the height as needed */
+  color: #000; /* Text color */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center;
+}
+
+.image-section .content {
+  max-width: 80%; /* Limit content width */
+}
+
+.image-section .content h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.image-section .content p {
+  font-size: 18px;
+  margin-bottom: 20px; /* Add margin to separate paragraphs */
+}
+
