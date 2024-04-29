@@ -1,0 +1,45 @@
+/* Footer styles */
+footer {
+    background-color: #232328;
+    color: #fbfbfb;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Adjust the width of each column if needed */
+.footer__column:nth-child(2) {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+}
+
+.footer__column:last-child {
+    margin-right: 0;
+}
+
+/* Optional: Style for logo */
+.footer-logo {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Optional: Style for social media links */
+.social-media-links a {
+    color: #fbfbfb;
+    margin-right: 10px;
+    text-decoration: none;
+}
