@@ -278,3 +278,7 @@ footer {
     margin-right: 10px;
     text-decoration: none;
 }
+
+.hidden {
+    display: none;
+}

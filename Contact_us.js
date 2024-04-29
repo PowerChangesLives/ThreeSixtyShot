@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+
     // Access the form element
     var form = document.querySelector('.contact-form form');
+    const response = document.getElementById('response');
 
     // Add event listener for form submission
     form.addEventListener('submit', function(event) {
@@ -24,8 +27,23 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Email:', email);
         console.log('Message:', message);
 
-        // Optionally, you can reset the form after successful submission
-        form.reset();
+
+
+        // Simulating form submission (replace with actual AJAX request)
+        setTimeout(() => {
+            response.textContent = `Thank you, ${name}! We have received your message.`;
+            form.reset();
+
+            // Hide form elements
+            const formElements = document.querySelectorAll('#contact-form');
+            formElements.forEach(element => {
+                element.classList.add('hidden');
+            });
+
+        }, 1000);
+
+
+
     });
 });
 
