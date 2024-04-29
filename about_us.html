@@ -3,15 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="about_us.css">    
+    <title>THREESIXTYSHOTS | About Us</title>
+    <link rel="stylesheet" href="mis.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+    <!-- Add Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>    
 </head>
 <body>
-    <header>
-        <div class="header__container">
-            <h2>About Us</h2>
+    <header id="header" class="header-section">
+        <nav class="navbar">
+            <div class="d-flex menu-wrap align-items-center">
+                <div id="mainmenu" class="mainmenu">
+                    <ul class="nav">
+                        <li><a data-scroll class="nav-link active" href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Photobooth Rentals</a>
+                            <ul class="submenu">
+                                <li><a href="holiday.html">Holiday Photobooth Rental</a></li>
+                                <li><a href="wedding.html">Wedding Photobooth Rental</a></li>
+                                <li><a href="special-events.html">Special Events Photobooth Rental</a></li>
+                                <li><a href="corporate.html">Corporate Photobooth Rental</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="Pricing.html">Pricing</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="Contact_us.html">Contact Us</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn">
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header> <!-- .header-section -->
+
+    <section class="hero">
+        <div class="hero__container">
+            <h4 class="sub-title">Trendy Machine For Any Event</h4>
+            <h2 class="title">ThreeSixtyShot Gallery</h2>
         </div>
-    </header><!-- .header-section -->
+    </section>
     <div class="row">
     <section>
         <h2>Who We Are</h2>
@@ -39,8 +75,77 @@
     </section>
     </div>
 
-    <footer>
-        <p>© [2024] ThreeSixtyShot. All rights reserved.</p>
+    <footer class="footer">
+        <!-- First column -->
+        <div class="footer-column">
+            <img src="logo.png" alt="Company Logo" class="footer-logo">
+            <p>123 Address St.</p>
+            <p>City, State, Zip</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Email: info@example.com</p>
+        </div>
+        <!-- Second column -->
+        <div class="footer-column">
+            <h4>Hours of Operation</h4>
+            <br>
+            <p>Monday - Friday: 9am - 5pm</p>
+            <p>Saturday: 10am - 4pm</p>
+            <p>Sunday: Closed</p>
+        </div>
+        <!-- Third column -->
+        <div class="footer-column">
+            <h4>Subscribe to THREESIXTYSHOTS</h4>
+            <br>
+            <form class="subscribe-form">
+                <input type="email" class="subscribe-input" placeholder="Enter your email">
+                <button type="submit" class="subscribe-button">Subscribe</button>
+            </form>
+            <br>
+            <div class="social-media">
+                <h4>Follow Us on Social Media</h4>
+                <br>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
     </footer>
+    
+    
+    
+
+    <!-- JavaScript for subscription form -->
+    <script>
+        document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            var email = document.getElementById('emailInput').value;
+
+            // Perform validation here if needed
+
+            // For demonstration purposes, simply log the email to the console
+            console.log('Subscribed with email:', email);
+
+            // You can also send the email to a server using AJAX to handle the subscription
+            // Example:
+            // fetch('/subscribe', {
+            //   method: 'POST',
+            //   body: JSON.stringify({ email: email }),
+            //   headers: {
+            //     'Content-Type': 'application/json'
+            //   }
+            // })
+            // .then(response => {
+            //   if (response.ok) {
+            //     console.log('Subscription successful');
+            //   } else {
+            //     console.error('Subscription failed');
+            //   }
+            // })
+            // .catch(error => {
+            //   console.error('Error:', error);
+            // });
+        });
+    </script>
 </body>
 </html>
