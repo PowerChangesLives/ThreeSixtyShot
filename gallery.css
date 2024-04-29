@@ -240,103 +240,62 @@ footer {
     background-color: #232328;
     color: #fbfbfb;
     padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
 }
 
 .footer__container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 
 .footer__column {
     flex: 1;
-    padding: 0 20px;
+    margin-right: 20px;
 }
 
-.subscribe-form {
+/* Adjust the width of each column if needed */
+.footer__column:nth-child(2) {
+    flex: 2;
     display: flex;
-    align-items: center;
-    margin-top: 10px;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
 }
 
-.subscribe-input {
-    height: 23.8px; /* Adjusted height */
-    padding: 8px;
-    border: none;
-    width: 210px;
+.footer__column:last-child {
+    margin-right: 0;
 }
 
-.subscribe-button {
-    height: 40px; /* Adjusted height */
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #9e8a78;
-    border: none;
+/* Optional: Style for logo */
+.footer-logo {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Optional: Style for social media links */
+.social-media-links a {
     color: #fbfbfb;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.subscribe-button:hover {
-    filter: brightness(80%);
-}
-
-.social-media {
-    margin-top: 10px;
-}
-
-.social-media a {
-    color: #fbfbfb;
-    text-decoration: none;
     margin-right: 10px;
+    text-decoration: none;
 }
 
-.social-media a:hover {
-    color: #ffd700;
-}
-
-/* footer ends */
-
-
-
-
-@media only screen and (max-width: 1024px) {
-    .gallery__container {
-        width: 600px;
-        height: max-content;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        padding: 50px 0 50px 0;
-    }
-}
-
+/* Media Queries */
 @media only screen and (max-width: 768px) {
-    .description__container__item {
-        width: 80%; /* Adjust width for tablet */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .des__title {
-        font-size: 30px; /* Adjust font size for tablet */
+    .footer__column {
+        margin: 0 0 20px;
     }
 
-    .des__par {
-        font-size: 16px; /* Adjust font size for tablet */
+    .footer__column:last-child {
+        margin-bottom: 0;
     }
 }
 
-@media only screen and (max-width: 480px) {
-    .description__container__item {
-        width: 90%; /* Adjust width for mobile */
-    }
-
-    .des__title {
-        font-size: 24px; /* Adjust font size for mobile */
-    }
-}
 
