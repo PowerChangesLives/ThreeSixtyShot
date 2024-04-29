@@ -3,54 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+    <!-- Add Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <title>ThreeSixtyShot | Frequently Asked Questions</title>
+    
+    <style>
+        /* Add CSS for FAQ accordion */
+        .faq__container__item p {
+            display: none; /* Hide answer paragraphs by default */
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header id="header" class="header-section">
-        <div class="container">
-            <nav class="navbar">
-                <div class="d-flex menu-wrap align-items-center">
-                    <div id="mainmenu" class="mainmenu">
-                        <ul class="nav">
-                            <li><a data-scroll class="nav-link active" href="index.html">Home</a></li>
-                            <li><a href="photobooth-rental.html">Photobooth Rentals</a>
-                                <ul>
-                                    <li><a href="holiday.html">Holiday Photobooth Rental</a></li>
-                                    <li><a href="wedding.html">Wedding Photobooth Rental</a></li>
-                                    <li><a href="special-requests.html">Special Events Photobooth Rental</a></li>
-                                    <li><a href="corporate.html">Corporate Photobooth Rental</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="reservation.html">Reservation</a></li>
-                            <li><a href="Contact_us.html">Contact Us</a></li>
-                            <li><a href="about_us.html">About Us</a></li>
-                            <li><a href="faq.html">FAQs</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="btn">
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register</a></li>
+        <nav class="navbar">
+            <div class="d-flex menu-wrap align-items-center">
+                <div id="mainmenu" class="mainmenu">
+                    <ul class="nav">
+                        <li><a data-scroll class="nav-link active" href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Photobooth Rentals</a>
+                            <ul class="submenu">
+                                <li><a href="holiday.html">Holiday Photobooth Rental</a></li>
+                                <li><a href="wedding.html">Wedding Photobooth Rental</a></li>
+                                <li><a href="special-events.html">Special Events Photobooth Rental</a></li>
+                                <li><a href="corporate.html">Corporate Photobooth Rental</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="Pricing.html">Pricing</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="Contact_us.html">Contact Us</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
                     </ul>
                 </div>
-            </nav>
-        </div>
-    </header><!-- .header-section -->
+            </div>
+            <div class="btn">
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header> <!-- .header-section -->
 
-    <!-- Main Content Section -->
     <main>
+        <section class="hero">
+            <div class="hero__container">
+                <h4 class="sub-title">Trendy Machine For Any Event</h4>
+                <h2 class="title">ThreeSixtyShot Gallery</h2>
+            </div>
+        </section>
+
         <div class="body">
             <div class="main__title">
                 <h2>Frequently Asked Questions</h2>
             </div>
             <div class="faq__container">
                 <div class="faq__browse">
-                    <h4>What Is...</h4>
+                    <!-- Add browse content if needed -->
                 </div>
                 <div class="faq__container__list">
                     <div class="faq__container__item">
@@ -82,14 +96,60 @@
         </div>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer__container">
-            <h2>Footer mock up</h2>
+    <footer class="footer">
+        <div class="footer-column">
+            <img src="logo.jpg" alt="Company Logo" class="footer-logo">
+            <p>403 Welsh Place</p>
+            <p>Morris Plains, NJ 07559</p>
+            <p>Phone: (973) 370-3543</p>
+            <p>Email: info@threesixtyshot.com</p>
+        </div>
+        <div class="footer-column">
+            <h4>Hours of Operation</h4>
+            <p>Monday - Friday: 9am - 5pm</p>
+            <p>Saturday: 10am - 4pm</p>
+            <p>Sunday: Closed</p>
+        </div>
+        <div class="footer-column">
+            <h4>Subscribe to THREESIXTYSHOTS</h4>
+            <br>
+            <form class="subscribe-form" id="subscribeForm">
+                <input type="email" class="subscribe-input" id="emailInput" placeholder="Enter your email">
+                <button type="submit" class="subscribe-button">Subscribe</button>
+            </form>
+            <br>
+            <div class="social-media">
+                <h4>Follow Us on Social Media</h4>
+                <br>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all FAQ question elements
+            var questions = document.querySelectorAll('.faq__questions');
+
+            // Add click event listener to each question
+            questions.forEach(function(question) {
+                question.addEventListener('click', function() {
+                    // Toggle visibility of next sibling element (answer)
+                    var answer = this.nextElementSibling;
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                    } else {
+                        answer.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
+
 
 
 
