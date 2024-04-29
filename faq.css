@@ -1,131 +1,258 @@
-* {
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text within the container */
+}
+
+/* Simple styling for the contact form */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+.header-section {
+    background-color: #232328;
+    color: #fbfbfb;
+    padding: 10px 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav {
+    list-style: none;
     padding: 0;
     margin: 0;
 }
-
-html {
-    font-family: century-gothic;
+.nav li {
+    display: inline-block;
+    margin-right: 20px;
 }
-/*---------------------------------------------------------*/
+.nav li a {
+    color: #fbfbfb;
+    text-decoration: none;
+}
+.nav li a:hover {
+    color: #ffd700;
+}
 
-
-/* header */ 
-.header__container {
-    width: 100%;
-    height: 60px;
+/* Existing CSS styles for header */
+.header-section {
     background-color: #232328;
-    color: white;
+    color: #fbfbfb;
+}
+
+.navbar {
+    padding: 20px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-
-}
-/* header ends */ 
-
-
-
-/*body starts */ 
-.body {
-    height: 95vh;
-    width: 100%;
-    padding-top: 50px;
+    font-weight: 500;
+    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
 }
 
-.main__title {
+.navbar ul.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul.nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.dropdown .submenu {
+    display: none;
+    position: absolute;
+    background-color: #232328;
+    padding: 10px;
+    margin-top: 10px;
+    width: 200px;
+    z-index: 1;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 5px 0;
+    list-style-type: none;
+}
+
+.submenu a {
+    display: block;
+    color: #fbfbfb;
+    text-decoration: none;
+}
+
+a{
+    display: block;
+    color: #fbfbfb;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.submenu a:hover {
+    color: #ffd700;
+}
+
+.btn ul {
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
+    gap: 10px; /* Add space between list items */
 }
-.faq__container {
+
+li{
+    list-style-type: none;
+}
+
+.btn ul li a {
+    text-decoration: none;
+    color: #fbfbfb;
+}
+
+/* Existing CSS styles for hero section, gallery section, and description section */
+.hero__container {
+    background-image: url(https://placehold.co/1280x420);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 40vh;
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.faq__browse {
-    width: 81%;
-    padding: 50px 0px 10px 0px;
+.sub-title { 
+    font-size: 20px;
+    color: #958475;
+    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
 }
 
-.faq__container__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: max-content;
+.title {
+    font-size: 40px;
+    padding-top: 10px;
+    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
+}
+
+
+button {
+    padding: 10px 20px; /* Add padding to the button */
+    font-size: 16px; /* Adjust font size as needed */
+    background-color: #9e8a78; /* Change button background color */
+    border: none; /* Remove button border */
+    color: #fbfbfb; /* Change button text color */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
+}
+
+button:hover {
+    filter: brightness(80%); /* Change button background color on hover */
+}
+
+/* New CSS styles */
+* {
+    box-sizing: border-box;
+}
+
+div {
+    font-family: 'century gothic';
 }
 
 .faq__container__item {
-    background-color: #89898A;
-    height: 120px;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px; /* Reduce margin to close the gap */
+    background-color: #f9f9f9; /* Set background color for every other box */
+    cursor: pointer; /* Add cursor */
+}
 
-    border-color: rgb(174, 172, 172);
-    border-style: solid;
-    border-width: 0.3px;
-    padding: 0px 10px;
+/* Alternate background color */
+.faq__container__item:nth-child(even) {
+    background-color: #e0e0e0; /* Change background color for even boxes */
 }
 
 .faq__questions {
-    padding-bottom: 10px;
+    margin-top: 0;
 }
 
-.faq__container__item:first-child {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.faq__container__item p {
+    margin-bottom: 0;
 }
 
-.faq__container__item:last-child {
-    border-bottom-left-radius: 13px;
-    border-bottom-right-radius: 13px;
-}
-
-.faq__container__item:nth-child(2n) {
-    background-color: #D9d4d0;
-}
-
-/* body ends */ 
 
 
-
-
-/* footer */ 
-footer {
-    height: 160px;
-    display: flex;
-    align-items: flex-end;
-}
-.footer__container {
-    width: 100%;
-    height: 100px;
-    background-color: #232328;
+.button {
+    background-color: #04AA6D;
+    border: none;
     color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #232328;
+    color: #fbfbfb;
+    padding: 30px 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* footer ends */ 
-
-
-
-
-@media screen and (min-width: 1201px) {
-    .faq__browse {
-        font-size: larger;
-    }
-    .faq__container__item {
-        height: 150px;
-        font-size: large;
-    }
-
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
 }
 
-@media screen and (max-width: 540px) {
-    .faq__container__item {
-        height: 150px;
-    }
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Adjust the width of each column if needed */
+.footer__column:nth-child(2) {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+}
+
+.footer__column:last-child {
+    margin-right: 0;
+}
+
+/* Optional: Style for logo */
+.footer-logo {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Optional: Style for social media links */
+.social-media-links a {
+    color: #fbfbfb;
+    margin-right: 10px;
+    text-decoration: none;
 }
