@@ -23,7 +23,7 @@
                 <p>Your reservation request will be immediately sent to our team at ThreeSixtyShot, who will promptly review and confirm the availability of the booth for your event. Our dedicated staff will work closely with you to finalize all order details, ensuring that everything is in place for a seamless and unforgettable experience for you and your guests.</p>
                 <p>Reserve your date and time now to ensure that your upcoming event is immortalized with the magic of 360° videography by ThreeSixtyShot. Let's make your reservation today and create memories that will last a lifetime.</p>
             </aside>
-            <form>
+            <form id="reservationForm" onsubmit="submitForm(event)">
                 <h2>Reservation Form</h2>
                 <fieldset>
                     <legend>Schedule Reservation</legend>
@@ -59,6 +59,12 @@
                 <button type="submit">Book a reservation</button>
                 <!-- Use a program to parse the information in form -->
             </form>
+
+            <div id="thankYouMessage" class="hidden">
+                <h2>Thank You!</h2>
+                <p>Your reservation has been submitted.</p>
+            </div>
+            <div id="secondResBtn" class="hidden"><button>Create Another Reservation</button></div>
             <aside>
                 <h2>Our Commitment To You</h2>
                 <p>At ThreeSixtyShot, we prioritize professionalism, efficiency, and personalized service. We recognize that every event is unique, and we are committed to tailoring our videography services to meet your specific needs and preferences. Whether you're planning a birthday celebration, a wedding, a corporate event, or any other special occasion, our team is here to support you every step of the way.</p>
@@ -98,6 +104,6 @@
                     </div>
                 </div>
             </footer>
-
+        <script src="reserve.js"></script>
     </body>
 </html>
