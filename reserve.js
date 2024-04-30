@@ -24,7 +24,21 @@ function submitForm(event) {
     // Hide reservation form
     document.getElementById('reservationForm').classList.add('hidden');
 
+    //Reset the reservation form
+    document.getElementById('reservationForm').reset();
+
     // Display thank you message
     document.getElementById('thankYouMessage').classList.remove('hidden');
     document.getElementById('secondResBtn').classList.remove('hidden');
 }
+
+// Function to show the reservation form
+function showForm() {
+    document.getElementById('reservationForm').classList.remove('hidden');
+    document.getElementById('thankYouMessage').classList.add('hidden');
+    document.getElementById('secondResBtn').classList.add('hidden');
+
+}
+
+// Event listener for the button with id "secondResBtn"
+document.getElementById('secondResBtn').addEventListener('click', showForm);
