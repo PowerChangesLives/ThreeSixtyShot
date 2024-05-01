@@ -1,84 +1,159 @@
-<!--Testing Testing-->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Title Here</title> <!-- Add your title here -->
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+      /* Footer styles */
+      footer {
+        background-color: #232328;
+        color: #fff;
+        padding: 30px 15px;
+        /* Adjust padding for smaller screens */
+      }
 
-<section class="widget_section padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 sm-padding">
-                <div class="footer_widget">
-                    <img class="mb-15" src="#" alt="Brand">
-                    <p>Elevate your events with 360° Photobooth, pioneering immersive experiences for weddings, holidays, and corporate gatherings. Capture every angle, engage with interactive features, and share high-quality, customizable content effortlessly. Book now for unforgettable celebrations!</p>
-                    <ul class="widget_social">
-                        <li><a href="#"><i class="social_facebook"></i></a></li>
-                        <li><a href="#"><i class="social_twitter"></i></a></li>
-                        <li><a href="#"><i class="social_tiktok"></i></a></li> <!-- Corrected class name to lowercase -->
-                        <li><a href="#"><i class="social_instagram"></i></a></li>
-                        <li><a href="#"><i class="social_linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 sm-padding">
-                <div class="footer_widget">
-                    <h3>Get in Touch with us</h3>
-                    <p>403 Welsh Place Morris Plains, NJ 07959 </p>
-                    <p>info@threesixtyshot.com<br>(973) 370-3543</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 sm-padding">
-                <div class="footer_widget">
-                    <h3>Opening Hours</h3>
-                    <ul class="opening_time">
-                        <li>Monday - Friday 11:30am - 2:008pm</li>
-                        <li>Saturday – Monday: 9am – 8pm</li>
-                        <li>Monday - Friday 5:30am - 11:008pm</li>
-                        <li>Saturday - Sunday 4:30am - 1:00pm</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-12 sm-padding">
-                <div class="footer_widget">
-                    <h3>Subscribe to our contents</h3>
-                    <div class="subscribe_form">
-                        <form action="#" class="subscribe_form" novalidate>
-                            <input type="email" name="EMAIL" id="subs-email" class="form_input" placeholder="Email Address...">
-                            <button type="submit" class="submit">SUBSCRIBE</button>
-                            <div class="clearfix"></div>
-                            <div id="subscribe-result">
-                                <p class="subscription-success"></p>
-                                <p class="subscription-error"></p>
-                            </div>
-                        </form>
-                    </div><!-- Subscribe Form -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<footer class="footer_section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 xs-padding">
-                <div class="copyright">© <script>document.write(new Date().getFullYear())</script>2024 Threesixtyshot Powered by ipage</div>
-            </div>
-            <div class="col-md-6 xs-padding">
-                <ul class="footer_social">
-                    <li><a href="#">Book Now</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Report Problem</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
-<a data-scroll="" href="#header" id="scroll-to-top" style="display: inline;"><i class="arrow_up"></i></a>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
 
-</body>
+      .col-md-4 {
+        width: 100%;
+        /* Full width for smaller screens */
+        margin-bottom: 20px;
+        /* Add some space between columns */
+      }
+
+      /* Logo styles */
+      .logo img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      /* Social icons styles */
+      .widget_social {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .widget_social li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .widget_social li:last-child {
+        margin-right: 0;
+      }
+
+      .widget_social a {
+        color: #fff;
+        font-size: 20px;
+      }
+
+      /* Address and contact styles */
+      .footer-content p {
+        margin-bottom: 10px;
+      }
+
+      /* Opening hours styles */
+      .opening_time {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .opening_time li {
+        margin-bottom: 5px;
+      }
+
+      /* Subscribe form styles */
+      .subscribe_form {
+        margin-top: 20px;
+      }
+
+      .subscribe_form input[type="email"],
+      .subscribe_form button[type="submit"] {
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+        /* Make inputs and button full width */
+        box-sizing: border-box;
+        /* Ensure padding and border are included in width */
+        margin-bottom: 10px;
+        /* Add some space between inputs and button */
+      }
+
+      .subscribe_form button[type="submit"] {
+        background-color: #ffd700;
+        color: #232328;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .subscribe_form button[type="submit"]:hover {
+        background-color: #ffcc00;
+      }
+
+      /* Subscription result styles */
+      #subscribe-result p {
+        margin: 5px 0;
+      }
+
+      /* Media query for smaller screens */
+      @media screen and (min-width: 768px) {
+        .col-md-4 {
+          width: 30%;
+          /* Reset width for larger screens */
+          margin-bottom: 0;
+          /* Remove margin bottom for larger screens */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <footer>
+      <div class="container">
+        <div class="col-md-4">
+          <img src="img/logo.png" alt="Brand">
+          <h3>Headquarters</h3>
+          <p>962 Fifth Avenue, 3rd Floor New York, NY10022</p>
+          <p>Hello@dynamiclayers.net <br>(+123) 456 789 101</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Opening Hours</h3>
+          <ul class="opening_time">
+            <li>Monday - Friday 11:30am - 2:00pm</li>
+            <li>Saturday - Sunday 4:30am - 1:00pm</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>Subscribe to our contents</h3>
+          <form action="#" class="subscribe_form">
+            <input type="email" name="EMAIL" id="subs-email" class="form_input" placeholder="Email Address...">
+            <button type="submit" class="submit">SUBSCRIBE</button>
+            <div class="clearfix"></div>
+            <div id="subscribe-result">
+              <p class="subscription-success"></p>
+              <p class="subscription-error"></p>
+              <ul class="widget_social">
+                <li><a href="#"><i class="social_facebook"></i></a>Facebook</li>
+                <li><a href="#"><i class="social_twitter"></i></a>Twitter</li>
+                <li><a href="#"><i class="social_instagram"></i></a>Instagram</li>
+                <li><a href="#"><i class="social_linkedin"></i></a>LinkedIn</li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+
 </html>
