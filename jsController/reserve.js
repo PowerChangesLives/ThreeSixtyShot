@@ -38,6 +38,10 @@ function submitForm(event) {
     const email = document.getElementById('email').value;
     const request = document.getElementById('request').value;
 
+    //Put the data values into an object:
+    const reservationData = new ReservationDataObject(
+        date, time, packageType, fName, lName, phone, email, request
+    )
 
     //Submit the form
 
