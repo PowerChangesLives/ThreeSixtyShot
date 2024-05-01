@@ -1,3 +1,4 @@
+import {sendReservationTo360Email} from 'modelJS/nodeMailer.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const dateInput = document.getElementById('date');
@@ -39,11 +40,12 @@ function submitForm(event) {
     const request = document.getElementById('request').value;
 
     //Put the data values into an object:
-    const reservationData = new ReservationDataObject(
+    module.exports = new ReservationDataObject(
         date, time, packageType, fName, lName, phone, email, request
-    )
-
+    );
     //Submit the form
+    sendReservationTo360Email(ReservationDataObject);
+
 
     // Log form information
     console.log('Reservation Date:', date);

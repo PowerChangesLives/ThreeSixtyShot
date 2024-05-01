@@ -4,6 +4,10 @@
 
 const nodemailer = require('modelJS/nodeMailer');
 
+const importedObject = require('jsController/reserve.js');
+const reservationData = importedObject;
+
+
 // Create a Nodemailer transporter with iPage SMTP settings
 const transporter = nodemailer.createTransport({
     host: 'smtp.ipage.com',
@@ -14,6 +18,33 @@ const transporter = nodemailer.createTransport({
         pass: 'P@ssW0rd!' // Your email password
     }
 });
+
+export function sendReservationTo360Email(reservationData){
+    let email = reservationData.email;
+    let date = reservationData.date;
+    let time = reservationData.time;
+    let packageType = reservationData.packageType;
+    let fName = reservationData.fName;
+    let lName = reservationData.lName;
+    let phone = reservationData.phone;
+    let specialReq = reservationData.specialRequest;
+
+    // Email options
+    const mailOptions = {
+        from: email, // Your email address
+        to: 'info@threesixtyshot.com', // Recipient email address
+        subject: 'New Reservation Made Via Website',
+        text: 'A new reservation was made on the 360 Shot Website:' +
+            '\n On Date: ' + date +
+            '\n Reservation Time: ' + time +
+            '\n Package Type: ' + packageType +
+            '\n Client First Name: ' + fName +
+            '\n Client Last Name: ' + lName +
+            '\n Client Phone: ' + phone +
+            '\n Client Email' + email
+    };
+
+}
 
 // Email options
 const mailOptions = {
