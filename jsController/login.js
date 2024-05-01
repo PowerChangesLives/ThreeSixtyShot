@@ -16,3 +16,5 @@ app.post('/login', (req, res) => {
     let password = req.body.password;
     res.send(`Username: ${username} Password: ${password}`);
 });
+
+//LOGIN NEEDS TO BE DELETED
