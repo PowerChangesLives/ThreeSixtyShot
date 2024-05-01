@@ -1,3 +1,5 @@
+import {sendContactTo360Email} from "../modelJS/nodeMailer";
+
 document.addEventListener('DOMContentLoaded', function() {
 
 
@@ -15,17 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
         var email = document.getElementById('email').value.trim();
         var message = document.getElementById('message').value.trim();
 
+
+        // If all fields are filled, you can proceed with form submission
         if (name === '' || email === '' || message === '') {
             alert('Please fill in all fields.');
             return;
         }
 
-        // If all fields are filled, you can proceed with form submission
+
         // For example, you can send the form data to a server using AJAX or fetch API
-        // Here, I'm just logging the form data
-        console.log('Name:', name);
-        console.log('Email:', email);
-        console.log('Message:', message);
+        // Here, I'm calling the nodeMailer to forward the information to the 360 email because I couldn't find any info on the iPage website about an API end to use fetch()
+        const ContactFormData = new ContactFormDataObject(name, email, message);
+        sendContactTo360Email(ContactFormData);
+
 
 
 

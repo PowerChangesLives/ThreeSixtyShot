@@ -43,7 +43,10 @@ function submitForm(event) {
     module.exports = new ReservationDataObject(
         date, time, packageType, fName, lName, phone, email, request
     );
+
     //Submit the form
+    // For example, you can send the form data to a server using AJAX or fetch API
+    // Here, I'm calling the nodeMailer to forward the information to the 360 email because I couldn't find any info on the iPage website about an API end to use fetch()
     sendReservationTo360Email(ReservationDataObject);
 
 

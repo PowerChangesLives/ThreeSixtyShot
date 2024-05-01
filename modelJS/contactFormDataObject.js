@@ -5,11 +5,11 @@ function ContactFormDataObject(name, email, message) {
     this.message = message;
 }
 
-// Usage example:
-// Create a new ContactFormDataObject instance
-const formData = new ContactFormDataObject('John Doe', 'johndoe@example.com', 'Hello, this is a test message.');
-
-// Accessing the attributes of the object
-console.log(formData.name); // Output: John Doe
-console.log(formData.email); // Output: johndoe@example.com
-console.log(formData.message); // Output: Hello, this is a test message.
+// // Usage example:
+// // Create a new ContactFormDataObject instance
+// const formData = new ContactFormDataObject('John Doe', 'johndoe@example.com', 'Hello, this is a test message.');
+//
+// // Accessing the attributes of the object
+// console.log(formData.name); // Output: John Doe
+// console.log(formData.email); // Output: johndoe@example.com
+// console.log(formData.message); // Output: Hello, this is a test message.
