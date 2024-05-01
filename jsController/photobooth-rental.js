@@ -4,3 +4,4 @@ function scrollToSection(sectionId) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
 }
+//FILE NEEDS TO BE DELETED
