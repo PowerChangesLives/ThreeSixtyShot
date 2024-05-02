@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styling -->
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1200px; /* Set maximum width */
+        }
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        /* Navigation */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* About section */
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+        }
+        .about-content {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (min-width: 768px) {
+            /* For tablets and desktops */
+            .about-container {
+                flex-direction: row;
+                align-items: center;
+            }
+            .about-content {
+                flex: 1;
+                text-align: left;
+                margin-right: 30px;
+            }
+            .about-image img {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to My Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#appointment">Appointment</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-content">
+                    <h2>About Us</h2>
+                    <p>This is the about section of our website. Here you can provide information about your company or yourself.</p>
+                </div>
+                <div class="about-image">
+                    <img src="about_image.jpg" alt="About Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service" class="section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>Here you can list the services you offer.</p>
+        </div>
+    </section>
+
+    <section id="appointment" class="section">
+        <div class="container">
+            <h2>Book an Appointment</h2>
+            <p>Use this section to allow visitors to book appointments with you.</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Gallery</h2>
+            <p>Display images or videos showcasing your work or products.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
