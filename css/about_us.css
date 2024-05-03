@@ -1,104 +1,114 @@
 /* This is for the header */
 header {
-    background-color: #232328;
-    padding: 30px 20px;
-    width: 100%;
-    position: fixed;
-  }
-  
-  /* This is for the navigation */
+  background-color: #232328;
+  padding: 15px 20px;
+  width: 100%;
+  position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* This is for the navigation */
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+/* This is for the logo*/
+.logo img {
+  max-width: 100%;
+  height: auto;
+  padding-top: 13px;
+}
+
+/* This is for the menu */
+.menu {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu li a {
+  color: #fbfbfb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+/* This is for the sub menus*/
+.menu ul {
+  display: none;
+  background-color: #958475;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.menu li:hover>ul {
+  display: block;
+}
+
+.menu ul li {
+  margin-bottom: 5px;
+}
+
+.menu ul li a {
+  color: #fbfbfb;
+  text-decoration: none;
+}
+
+
+
+/* This is for the header button (reservation button) */
+.header-btn {
+  margin-top: 20px;
+}
+
+.header-btn a {
+  padding: 10px 20px;
+  background-color: #958475;
+  color: #232328;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.header-btn a:hover {
+  background-color: #958475;
+}
+
+/* Media queries added for mobile responsiveness */
+@media screen and (min-width: 768px) {
   nav {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* This is for the logo*/
-  .logo img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* This is for the menu */
-  .menu {
-    list-style: none;
-    margin-top: 20px;
-  }
-  
-  .menu li {
-    margin-bottom: 10px;
-  }
-  
-  .menu li a {
-    color: #fbfbfb;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  
-  /* This is for the sub menus*/
-  .menu ul {
-    display: none;
-    background-color: #958475;
-    list-style: none;
-    padding-left: 20px;
-  }
-  
-  .menu li:hover>ul {
-    display: block;
-  }
-  
-  .menu ul li {
-    margin-bottom: 5px;
-  }
-  
-  .menu ul li a {
-    color: #fbfbfb;
-    text-decoration: none;
-  }
-  
-  
-  
-  /* This is for the header button (reservation button) */
-  .header-btn {
-    margin-top: 20px;
-  }
-  
-  .header-btn a {
-    padding: 10px 20px;
-    background-color: #958475;
-    color: #232328;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .header-btn a:hover {
-    background-color: #958475;
-  }
-  
-  /* Media queries added for mobile responsiveness */
-  @media screen and (min-width: 768px) {
-    nav {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .menu {
-      display: flex;
-      margin-top: 0;
-    }
-  
-    .menu li {
-      margin-bottom: 0;
-      margin-right: 20px;
-    }
-  
-    .header-btn {
-      margin-top: 0;
-    }
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
+  .menu {
+    display: flex;
+    margin-top: 0;
+  }
+
+  .menu li {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .header-btn {
+    margin-top: 0;
+  }
+}
+
 /* hero section */ 
+.hero {
+  margin-top: 100px;
+}
+
+
 .hero__container {
     background-image: url(https://placehold.co/1280x420);
     background-repeat: no-repeat;
@@ -166,80 +176,118 @@ h2{
     text-align: center;
 }
 
-/* footer */
+/* Footer styles */
 footer {
-    background-color: #232328;
-    color: #fbfbfb;
-    padding: 30px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
+  background-color: #232328;
+  color: #fbfbfb;
+  padding: 30px 15px;
+  /* Adjust padding for smaller screens */
 }
 
-.footer__container {
-    max-width: 1200px;
-    margin: 0 auto;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.footer__column {
-    flex: 1;
-    margin-right: 20px;
+.col-md-4 {
+  width: 100%;
+  /* Full width for smaller screens */
+  margin-bottom: 20px;
+  /* Add some space between columns */
 }
 
-/* Adjust the width of each column if needed */
-.footer__column:nth-child(2) {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the content horizontally */
+/* Logo styles */
+.logo img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
 }
 
-.footer__column:last-child {
-    margin-right: 0;
+/* Social icons styles */
+.widget_social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Optional: Style for logo */
-.footer-logo {
-    max-width: 100px;
-    height: auto;
+.widget_social li {
+  display: inline-block;
+  margin-right: 10px;
 }
 
-/* Optional: Style for social media links */
-.social-media-links a {
-    color: #fbfbfb;
-    margin-right: 10px;
-    text-decoration: none;
+.widget_social li:last-child {
+  margin-right: 0;
 }
 
-/* Media Queries */
-@media only screen and (max-width: 768px) {
-    /* Add mobile-specific styles here */
-    .body {
-        background-color: #D9D4D0; /* Adjust body background color for mobile */
-    }
-
-    .row {
-        flex-direction: column; /* Change row direction to column for mobile */
-    }
-
-    section {
-        margin: 15px 0; /* Adjust margin for sections in mobile view */
-        padding: 20px 10px; /* Adjust padding for sections in mobile view */
-    }
-
-    h2 {
-        text-align: center; /* Center align headings in mobile view */
-    }
+.widget_social a {
+  color: #fbfbfb;
+  font-size: 20px;
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Add tablet-specific styles here */
+/* Address and contact styles */
+.footer-content p {
+  margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 1025px) {
-    /* Add desktop-specific styles here */
+/* Opening hours styles */
+.opening_time {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+.opening_time li {
+  margin-bottom: 5px;
+}
+
+/* Subscribe form styles */
+.subscribe_form {
+  margin-top: 20px;
+}
+
+.subscribe_form input[type="email"],
+.subscribe_form button[type="submit"] {
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  /* Make inputs and button full width */
+  box-sizing: border-box;
+  /* Ensure padding and border are included in width */
+  margin-bottom: 10px;
+  /* Add some space between inputs and button */
+}
+
+.subscribe_form button[type="submit"] {
+  background-color: #958475;
+  color: #fbfbfb;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe_form button[type="submit"]:hover {
+  filter: brightness(80%);
+}
+
+/* Subscription result styles */
+#subscribe-result p {
+  margin: 5px 0;
+}
+
+/* Media query for smaller screens */
+@media screen and (min-width: 768px) {
+  .col-md-4 {
+    width: 30%;
+    /* Reset width for larger screens */
+    margin-bottom: 0;
+    /* Remove margin bottom for larger screens */
+  }
+}
+
+
+
+
 
 
 
