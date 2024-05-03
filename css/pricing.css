@@ -1,108 +1,152 @@
-/* Existing CSS styles for header */
-.header-section {
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #ede5e2;
+  }
+  
+  /* This is for the header */
+  header {
     background-color: #232328;
-    color: #fbfbfb;
-}
-
-.navbar {
-    padding: 20px 20px;
+    font-family: 'century gothic';
+    padding: 15px 20px;
+    width: 100%;
+    position: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  /* This is for the navigation */
+  nav {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-weight: 500;
-    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
-}
-
-.navbar ul.nav {
+    flex-direction: column;
+  }
+  
+  /* This is for the logo*/
+  .logo img {
+    max-width: 100%;
+    height: auto;
+    padding-top: 13px;
+  }
+  
+  /* This is for the menu */
+  .menu {
     list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar ul.nav li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.dropdown .submenu {
+    margin-top: 20px;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .menu li a {
+    color: #fbfbfb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  
+  /* This is for the sub menus*/
+  .menu ul {
     display: none;
-    position: absolute;
-    background-color: #232328;
-    padding: 10px;
-    margin-top: 10px;
-    width: 200px;
-    z-index: 1;
-}
-
-.dropdown:hover .submenu {
+    background-color: #958475;
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  .menu li:hover>ul {
     display: block;
-}
-
-.submenu li {
-    margin: 5px 0;
-    list-style-type: none;
-}
-
-.submenu a {
-    display: block;
+  }
+  
+  .menu ul li {
+    margin-bottom: 5px;
+  }
+  
+  .menu ul li a {
     color: #fbfbfb;
     text-decoration: none;
-}
-
-a{
-    display: block;
-    color: #fbfbfb;
+  }
+  
+  
+  
+  /* This is for the header button (reservation button) */
+  .header-btn {
+    margin-top: 20px;
+  }
+  
+  .header-btn a {
+    padding: 10px 20px;
+    background-color: #958475;
+    color: #232328;
     text-decoration: none;
-}
-
-.submenu a:hover {
-    color: #ffd700;
-}
-
-.btn ul {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 10px; /* Add space between list items */
-}
-
-li{
-    list-style-type: none;
-}
-
-.btn ul li a {
-    text-decoration: none;
-    color: #fbfbfb;
-}
-
-/* Existing CSS styles for hero section, gallery section, and description section */
-.hero__container {
+    transition: background-color 0.3s ease;
+  }
+  
+  .header-btn a:hover {
+    background-color: #958475;
+  }
+  
+  /* Media queries added for mobile responsiveness */
+  @media screen and (min-width: 768px) {
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .menu {
+      display: flex;
+      margin-top: 0;
+    }
+  
+    .menu li {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  
+    .header-btn {
+      margin-top: 0;
+    }
+  }
+  
+  /* hero section */ 
+  .hero {
+    margin-top: 100px;
+  }
+  
+  
+  .hero__container {
     background-image: url(https://placehold.co/1280x420);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 40vh;
     width: 100%;
+  
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.sub-title { 
+  }
+  
+  .sub-title { 
     font-size: 20px;
     color: #958475;
-    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
-}
-
-.title {
+  }
+  
+  .title {
     font-size: 40px;
     padding-top: 10px;
-    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
-}
-
-
-button {
+  }
+  /* hero ends */ 
+  
+  button {
     padding: 10px 20px; /* Add padding to the button */
     font-size: 16px; /* Adjust font size as needed */
     background-color: #9e8a78; /* Change button background color */
@@ -110,17 +154,14 @@ button {
     color: #fbfbfb; /* Change button text color */
     cursor: pointer; /* Add cursor pointer on hover */
     transition: background-color 0.3s ease; /* Smooth transition for background color change */
-    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
-}
-
-button:hover {
+  }
+  
+  button:hover {
     filter: brightness(80%); /* Change button background color on hover */
-}
-
+  }
+  
 /* New CSS styles */
-* {
-    box-sizing: border-box;
-}
+
 
 div {
     font-family: 'century gothic';
@@ -162,6 +203,7 @@ div {
     font-size: 20px;
 }
 
+
 .button {
     background-color: #04AA6D;
     border: none;
@@ -178,52 +220,335 @@ div {
     }
 }
 
+html {
+    font-style: 'Century Gothic';
+}
+
+ /* Reset default margin and padding */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ede5e2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
+}
+
+/* This is for the header */
+header {
+    background-color: #232328;
+    font-family: 'century gothic';
+    padding: 15px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* This is for the navigation */
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/* This is for the logo*/
+.logo img {
+    max-width: 100%;
+    height: auto;
+    padding-top: 13px;
+}
+
+/* This is for the menu */
+.menu {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu li a {
+    color: #fbfbfb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* This is for the sub menus*/
+.menu ul {
+    display: none;
+    background-color: #958475;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.menu li:hover>ul {
+    display: block;
+}
+
+.menu ul li {
+    margin-bottom: 5px;
+}
+
+.menu ul li a {
+    color: #fbfbfb;
+    text-decoration: none;
+}
+
+
+
+/* This is for the header button (reservation button) */
+.header-btn {
+    margin-top: 20px;
+}
+
+.header-btn a {
+    padding: 10px 20px;
+    background-color: #958475;
+    color: #232328;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.header-btn a:hover {
+    background-color: #958475;
+}
+
+/* Media queries added for mobile responsiveness */
+@media screen and (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        margin-top: 0;
+    }
+
+    .menu li {
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .header-btn {
+        margin-top: 0;
+    }
+}
+
+/* hero section */
+.hero {
+    margin-top: 100px;
+}
+
+
+.hero__container {
+    background-image: url(https://placehold.co/1280x420);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-title {
+    font-size: 20px;
+    color: #958475;
+}
+
+.title {
+    font-size: 40px;
+    padding-top: 10px;
+}
+/* hero ends */
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #9e8a78;
+    border: none;
+    color: #fbfbfb;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    filter: brightness(80%);
+}
+
+/* Pricing */
+.pricing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px; /* Adjust as needed to create space below the header */
+    margin-bottom: 60px;
+    padding: 20px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in the total width */
+}
+
+
+.pricing-plan {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    background-color: #fbfbfb;
+}
+
+.pricing-plan h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.price {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.pricing-info {
+    padding-top: 50px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .pricing {
+        margin-top: 80px; /* Adjust margin for smaller screens */
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
 /* Footer styles */
 footer {
     background-color: #232328;
     color: #fbfbfb;
-    padding: 30px 0;
+    padding: 30px 15px;
+    margin-top: auto; /* Set the top margin to auto to push the footer to the bottom */
+}
+
+.container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
-    font-family: 'Century Gothic', sans-serif; /* Apply Century Gothic font */
 }
 
-.footer__container {
-    max-width: 1200px;
-    margin: 0 auto;
+.col-md-4 {
+    width: 100%;
+    /* Full width for smaller screens */
+    margin-bottom: 20px;
+    /* Add some space between columns */
 }
 
-.footer__column {
-    flex: 1;
-    margin-right: 20px;
+/* Logo styles */
+.logo img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
 }
 
-/* Adjust the width of each column if needed */
-.footer__column:nth-child(2) {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the content horizontally */
+/* Social icons styles */
+.widget_social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.footer__column:last-child {
+.widget_social li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.widget_social li:last-child {
     margin-right: 0;
 }
 
-/* Optional: Style for logo */
-.footer-logo {
-    max-width: 100px;
-    height: auto;
-}
-
-/* Optional: Style for social media links */
-.social-media-links a {
+.widget_social a {
     color: #fbfbfb;
-    margin-right: 10px;
-    text-decoration: none;
+    font-size: 20px;
 }
 
+/* Address and contact styles */
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+/* Opening hours styles */
+.opening_time {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.opening_time li {
+    margin-bottom: 5px;
+}
+
+/* Subscribe form styles */
+.subscribe_form {
+    margin-top: 20px;
+}
+
+.subscribe_form input[type="email"],
+.subscribe_form button[type="submit"] {
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    /* Make inputs and button full width */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width */
+    margin-bottom: 10px;
+    /* Add some space between inputs and button */
+}
+
+.subscribe_form button[type="submit"] {
+    background-color: #958475;
+    color: #fbfbfb;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe_form button[type="submit"]:hover {
+    filter: brightness(80%);
+}
+
+/* Subscription result styles */
+#subscribe-result p {
+    margin: 5px 0;
+}
+
+/* Media query for smaller screens */
+@media screen and (min-width: 768px) {
+    .col-md-4 {
+        width: 30%;
+        /* Reset width for larger screens */
+        margin-bottom: 0;
+        /* Remove margin bottom for larger screens */
+    }
+}
+  
+  
 
 
 
