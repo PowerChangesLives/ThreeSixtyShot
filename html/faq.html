@@ -1,56 +1,48 @@
+
+
+<!--THIS FAQ NEEDS TO BE REWORKED ENTIRELY-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/faq.css">
+    <title>ThreeSixtyShot | Frequent Asked Questions</title>
     <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
-    <!-- Add Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <title>ThreeSixtyShot | Frequently Asked Questions</title>
-    
-    <style>
-        /* Add CSS for FAQ accordion */
-        .faq__container__item p {
-            display: none; /* Hide answer paragraphs by default */
-        }
-    </style>
+    <link rel="stylesheet" href="../css/faq.css">
 </head>
+
 <body>
-    <header id="header" class="header-section">
-        <nav class="navbar">
-            <div class="d-flex menu-wrap align-items-center">
-                <div id="mainmenu" class="mainmenu">
-                    <ul class="nav">
-                        <li><a data-scroll class="nav-link active" href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="#">Photobooth Rentals</a>
-                            <ul class="submenu">
-                                <li><a href="holiday.html">Holiday Photobooth Rental</a></li>
-                                <li><a href="wedding.html">Wedding Photobooth Rental</a></li>
-                                <li><a href="special-events.html">Special Events Photobooth Rental</a></li>
-                                <li><a href="corporate.html">Corporate Photobooth Rental</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="Pricing.html">Pricing</a></li>
-                        <li><a href="reservation.html">Reservation</a></li>
-                        <li><a href="Contact_us.html">Contact Us</a></li>
-                        <li><a href="about_us.html">About Us</a></li>
-                    </ul>
-                </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="home.html"><img src="../images/logo.jpg" alt="company logo" width="100" height="50"></a>
             </div>
-            <div class="btn">
-                <ul>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
-                </ul>
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="#">Photobooth Rentals</a>
+                    <ul>
+                        <li><a href="holiday.html">Holiday</a></li>
+                        <li><a href="wedding.html">Wedding</a></li>
+                        <li><a href="special-events.html">Special Events</a></li>
+                        <li><a href="corporate.html">Corporate</a></li>
+                    </ul>
+                </li>
+                <li><a href="Pricing.html">Pricing</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="Contact_us.html">Contact</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+            </ul>
+            <div class="header-btn">
+                <a href="reserve.html" class="menu-btn">Book a Reservation</a>
             </div>
         </nav>
     </header> <!-- .header-section -->
 
     <main>
+
         <section class="hero">
             <div class="hero__container">
                 <h4 class="sub-title">Trendy Machine For Any Event</h4>
@@ -58,98 +50,139 @@
             </div>
         </section>
 
-        <div class="body">
-            <div class="main__title">
-                <h2>Frequently Asked Questions</h2>
-            </div>
-            <div class="faq__container">
-                <div class="faq__browse">
-                    <!-- Add browse content if needed -->
-                </div>
-                <div class="faq__container__list">
-                    <div class="faq__container__item">
-                        <h4 class="faq__questions">360-Degree Photobooth Rental</h4>
-                        <p>Rent out a fully equipped 360-degree photobooth for events. Guests can capture immersive photos and videos from all angles.</p>
-                    </div>
-                    <div class="faq__container__item">
-                        <h4 class="faq__questions">360-Degree Video Booth</h4>
-                        <p>Offer video recording in addition to photos. Guests can record short clips with dynamic backgrounds. Perfect for capturing special messages or dance moves!</p>
-                    </div>
-                    <div class="faq__container__item">
-                        <h4 class="faq__questions">360-Degree Slow-Mo Booth</h4>
-                        <p>Slow down the action! Capture slow-motion videos with the 360-degree camera, adding a unique twist to the usual photobooth experience.</p>
-                    </div>
-                    <div class="faq__container__item">
-                        <h4 class="faq__questions">360-Degree Social Sharing</h4>
-                        <p>Integrate social media sharing directly from the booth. Guests can instantly upload their 360-degree photos and videos to platforms like Instagram and Facebook.</p>
-                    </div>
-                    <div class="faq__container__item">
-                        <h4 class="faq__questions">360-Degree Event Branding</h4>
-                        <p>Customize the booth with event-specific branding, logos, and overlays. Make it a memorable part of any occasion.</p>
-                    </div>
-                    <div class="faq__container__item">
-                        <h4 class="faq__questions">360-Degree Props and Filters</h4>
-                        <p>Provide an array of props and digital filters that work seamlessly with the 360-degree setup. From funky hats to cosmic effects, let guests get creative!</p>
-                    </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-title">360-Degree Photobooth Rental</div>
+                <div class="accordion-content">
+                    <p>Rent out a fully equipped 360-degree photobooth for events. Guests can capture immersive photos and videos from all angles.</p>
                 </div>
             </div>
+            <div class="accordion-item">
+                <div class="accordion-title">Question 2</div>
+                <div class="accordion-content">
+                    <p>Answer to question 2.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">Question 1</div>
+                <div class="accordion-content">
+                    <p>Answer to question 1.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">Question 2</div>
+                <div class="accordion-content">
+                    <p>Answer to question 2.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">Question 1</div>
+                <div class="accordion-content">
+                    <p>Answer to question 1.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">Question 2</div>
+                <div class="accordion-content">
+                    <p>Answer to question 2.</p>
+                </div>
+            </div>
+            <!-- Add more FAQ items as needed -->
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-column">
-            <img src="../images/logo.jpg" alt="Company Logo" class="footer-logo">
-            <p>403 Welsh Place</p>
-            <p>Morris Plains, NJ 07559</p>
-            <p>Phone: (973) 370-3543</p>
-            <p>Email: info@threesixtyshot.com</p>
-        </div>
-        <div class="footer-column">
-            <h4>Hours of Operation</h4>
-            <p>Monday - Friday: 9am - 5pm</p>
-            <p>Saturday: 10am - 4pm</p>
-            <p>Sunday: Closed</p>
-        </div>
-        <div class="footer-column">
-            <h4>Subscribe to THREESIXTYSHOTS</h4>
-            <br>
-            <form class="subscribe-form" id="subscribeForm">
-                <input type="email" class="subscribe-input" id="emailInput" placeholder="Enter your email">
-                <button type="submit" class="subscribe-button">Subscribe</button>
-            </form>
-            <br>
-            <div class="social-media">
-                <h4>Follow Us on Social Media</h4>
+    <footer>
+        <div class="container">
+            <div class="col-md-4">
+                <img src="../images/logo.jpg" alt="Company Logo" width="150" height="50">
                 <br>
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
+                <h3>Headquarters</h3>
+                <p>403 Welsh Place, Morris Plains, NJ 07959</p>
+                <p>Email: info@threesixtyshot.com</p>
+                <p>Phone: 973-370-3543</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Opening Hours</h3>
+                <br>
+                <ul class="opening_time">
+                    <li>Monday - Friday 8:00am - 8:00pm</li>
+                    <li>Saturday - Sunday 9:30am - 10:00pm</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Subscribe to ThreeSixtyShot</h3>
+                <form action="#" class="subscribe_form" id="subscribeForm">
+                    <input type="email" name="EMAIL" id="emailInput" class="form_input"
+                        placeholder="Email Address...">
+                    <button type="submit" class="submit">SUBSCRIBE</button>
+                    <div class="clearfix"></div>
+                    <div id="subscribe-result">
+                        <p class="subscription-success"></p>
+                        <p class="subscription-error"></p>
+                        <ul class="widget_social">
+                            <li><a href="#"><i class="social_facebook"></i></a>Facebook</li>
+                            <li><a href="#"><i class="social_twitter"></i></a>Twitter</li>
+                            <li><a href="#"><i class="social_instagram"></i></a>Instagram</li>
+                            <li><a href="#"><i class="social_linkedin"></i></a>LinkedIn</li>
+                        </ul>
+                    </div>
+                </form>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript for subscription form -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get all FAQ question elements
-            var questions = document.querySelectorAll('.faq__questions');
+        document.getElementById('subscribeForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting
 
-            // Add click event listener to each question
-            questions.forEach(function(question) {
-                question.addEventListener('click', function() {
-                    // Toggle visibility of next sibling element (answer)
-                    var answer = this.nextElementSibling;
-                    if (answer.style.display === 'block') {
-                        answer.style.display = 'none';
-                    } else {
-                        answer.style.display = 'block';
-                    }
-                });
-            });
+            var email = document.getElementById('emailInput').value;
+
+            // Perform validation here if needed
+
+            // For demonstration purposes, simply log the email to the console
+            console.log('Subscribed with email:', email);
+
+            // You can also send the email to a server using AJAX to handle the subscription
+            // Example:
+            // fetch('/subscribe', {
+            //   method: 'POST',
+            //   body: JSON.stringify({ email: email }),
+            //   headers: {
+            //     'Content-Type': 'application/json'
+            //   }
+            // })
+            // .then(response => {
+            //   if (response.ok) {
+            //     console.log('Subscription successful');
+            //   } else {
+            //     console.error('Subscription failed');
+            //   }
+            // })
+            // .catch(error => {
+            //   console.error('Error:', error);
+            // });
         });
     </script>
-</body>
-</html>
+<script>
+    // Add click event listener to all accordion titles
+document.querySelectorAll('.accordion-title').forEach(title => {
+  title.addEventListener('click', () => {
+    const item = title.parentElement;
 
+    // Toggle active class on content
+    const content = item.querySelector('.accordion-content');
+    content.classList.toggle('active');
+
+    // Toggle active class on title
+    title.classList.toggle('active');
+  });
+});
+
+</script>
+</body>
+
+</html>
 
 
 
