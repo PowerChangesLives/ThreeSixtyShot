@@ -1,0 +1,104 @@
+/* This is for the header */
+header {
+  background-color: #232328;
+  padding: 15px 20px;
+  width: 100%;
+  position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* This is for the navigation */
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+/* This is for the logo*/
+.logo img {
+  max-width: 100%;
+  height: auto;
+  padding-top: 13px;
+}
+
+/* This is for the menu */
+.menu {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu li a {
+  color: #fbfbfb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+/* This is for the sub menus*/
+.menu ul {
+  display: none;
+  background-color: #958475;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.menu li:hover>ul {
+  display: block;
+}
+
+.menu ul li {
+  margin-bottom: 5px;
+}
+
+.menu ul li a {
+  color: #fbfbfb;
+  text-decoration: none;
+}
+
+
+
+/* This is for the header button (reservation button) */
+.header-btn {
+  margin-top: 20px;
+}
+
+.header-btn a {
+  padding: 10px 20px;
+  background-color: #958475;
+  color: #232328;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.header-btn a:hover {
+  background-color: #958475;
+}
+
+/* Media queries added for mobile responsiveness */
+@media screen and (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+    margin-top: 0;
+  }
+
+  .menu li {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .header-btn {
+    margin-top: 0;
+  }
+}
