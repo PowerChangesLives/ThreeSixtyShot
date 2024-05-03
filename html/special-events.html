@@ -12,40 +12,32 @@
     
 </head>
 <body>
-    <header id="header" class="header-section">
-        <nav class="navbar">
-            <div class="d-flex menu-wrap align-items-center">
-                <div id="mainmenu" class="mainmenu">
-                    <ul class="nav">
-                        <li><a data-scroll class="nav-link active" href="home.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="#">Photobooth Rentals</a>
-                            <ul class="submenu">
-                                <li><a href="holiday.html">Holiday Photobooth Rental</a></li>
-                                <li><a href="wedding.html">Wedding Photobooth Rental</a></li>
-                                <li><a href="special-events.html">Special Events Photobooth Rental</a></li>
-                                <li><a href="corporate.html">Corporate Photobooth Rental</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="Pricing.html">Pricing</a></li>
-                        <li><a href="reservation.html">Reservation</a></li>
-                        <li><a href="Contact_us.html">Contact Us</a></li>
-                        <li><a href="about_us.html">About Us</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-
-                    </ul>
-                </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="home.html"><img src="../images/logo.jpg" alt="company logo" width="100" height="50"></a>
             </div>
-            <div class="btn">
-                <ul>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
-                </ul>
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="#">Photobooth Rentals</a>
+                    <ul>
+                        <li><a href="holiday.html">Holiday</a></li>
+                        <li><a href="wedding.html">Wedding</a></li>
+                        <li><a href="special-events.html">Special Events</a></li>
+                        <li><a href="corporate.html">Corporate</a></li>
+                    </ul>
+                </li>
+                <li><a href="Pricing.html">Pricing</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="Contact_us.html">Contact</a></li>
+                <li><a href="fa">FAQs</a></li>
+            </ul>
+            <div class="header-btn">
+                <a href="reserve.html" class="menu-btn">Book a Reservation</a>
             </div>
         </nav>
     </header> <!-- .header-section -->
-
 
     <main>
 
@@ -99,7 +91,7 @@
                 with just a tap or smile, becoming part of the storytelling experience.</p>
         </section>
 
-        <div>
+        <div class="cta">
             <p>Create unforgettable moments at your milestone gathering with Event360, adding a touch of magic and
                 modernity
                 to your celebration for lasting memories. Elevate the storytelling of your "Sparkling Sweet 16s",
@@ -111,55 +103,77 @@
             </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer-column">
-            <img src="../images/logo.jpg" alt="Company Logo" class="footer-logo">
-            <p>403 Welsh Place</p>
-            <p>Morris Plains, NJ 07559</p>
-            <p>Phone: (973) 370-3543</p>
-            <p>Email: info@threesixtyshot.com</p>
-        </div>
-        <div class="footer-column">
-            <h4>Hours of Operation</h4>
-            <p>Monday - Friday: 9am - 5pm</p>
-            <p>Saturday: 10am - 4pm</p>
-            <p>Sunday: Closed</p>
-        </div>
-        <div class="footer-column">
-            <h4>Subscribe to THREESIXTYSHOTS</h4>
-            <br>
-            <form class="subscribe-form" id="subscribeForm">
-                <input type="email" class="subscribe-input" id="emailInput" placeholder="Enter your email">
-                <button type="submit" class="subscribe-button">Subscribe</button>
-            </form>
-            <br>
-            <div class="social-media">
-                <h4>Follow Us on Social Media</h4>
+    <footer>
+        <div class="container">
+            <div class="col-md-4">
+                <img src="../images/logo.jpg" alt="Company Logo" width="150" height="50">
                 <br>
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
+                <h3>Headquarters</h3>
+                <p>403 Welsh Place, Morris Plains, NJ 07959</p>
+                <p>Email: info@threesixtyshot.com</p>
+                <p>Phone: 973-370-3543</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Opening Hours</h3>
+                <br>
+                <ul class="opening_time">
+                    <li>Monday - Friday 8:00am - 8:00pm</li>
+                    <li>Saturday - Sunday 9:30am - 10:00pm</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Subscribe to ThreeSixtyShot</h3>
+                <form action="#" class="subscribe_form" id="subscribeForm">
+                    <input type="email" name="EMAIL" id="emailInput" class="form_input" placeholder="Email Address...">
+                    <button type="submit" class="submit">SUBSCRIBE</button>
+                    <div class="clearfix"></div>
+                    <div id="subscribe-result">
+                        <p class="subscription-success"></p>
+                        <p class="subscription-error"></p>
+                        <ul class="widget_social">
+                            <li><a href="#"><i class="social_facebook"></i></a>Facebook</li>
+                            <li><a href="#"><i class="social_twitter"></i></a>Twitter</li>
+                            <li><a href="#"><i class="social_instagram"></i></a>Instagram</li>
+                            <li><a href="#"><i class="social_linkedin"></i></a>LinkedIn</li>
+                        </ul>
+                    </div>
+                </form>
             </div>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get all FAQ question elements
-            var questions = document.querySelectorAll('.faq__questions');
 
-            // Add click event listener to each question
-            questions.forEach(function(question) {
-                question.addEventListener('click', function() {
-                    // Toggle visibility of next sibling element (answer)
-                    var answer = this.nextElementSibling;
-                    if (answer.style.display === 'block') {
-                        answer.style.display = 'none';
-                    } else {
-                        answer.style.display = 'block';
-                    }
-                });
-            });
+    <!-- JavaScript for subscription form -->
+    <script>
+        document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            var email = document.getElementById('emailInput').value;
+
+            // Perform validation here if needed
+
+            // For demonstration purposes, simply log the email to the console
+            console.log('Subscribed with email:', email);
+
+            // You can also send the email to a server using AJAX to handle the subscription
+            // Example:
+            // fetch('/subscribe', {
+            //   method: 'POST',
+            //   body: JSON.stringify({ email: email }),
+            //   headers: {
+            //     'Content-Type': 'application/json'
+            //   }
+            // })
+            // .then(response => {
+            //   if (response.ok) {
+            //     console.log('Subscription successful');
+            //   } else {
+            //     console.error('Subscription failed');
+            //   }
+            // })
+            // .catch(error => {
+            //   console.error('Error:', error);
+            // });
         });
     </script>
 </body>
