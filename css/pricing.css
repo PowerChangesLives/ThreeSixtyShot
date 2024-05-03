@@ -388,6 +388,65 @@ button:hover {
     filter: brightness(80%);
 }
 
+.row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .column {
+    float: left;
+    width: 48%; /* Adjust width as needed */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .about-content {
+    text-align: left;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  html {
+    font-family: century-gothic;
+  }
+  
+  .body {
+    background-color: #D9D4D0;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 5px; 
+  }
+  
+  section {
+    flex: 1;
+    margin: 15px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  h2{
+    text-align: center;
+  }
+  
+  /* About section */
+  #about {
+    text-align: center;
+  }
+
 /* Pricing */
 .pricing {
     display: flex;
@@ -548,6 +607,8 @@ footer {
     }
 }
   
+  
+
   
 
 
