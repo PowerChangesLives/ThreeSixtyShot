@@ -1,0 +1,109 @@
+/* Footer styles */
+footer {
+    background-color: #232328;
+    color: #fbfbfb;
+    padding: 30px 15px;
+    /* Adjust padding for smaller screens */
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .col-md-4 {
+    width: 100%;
+    /* Full width for smaller screens */
+    margin-bottom: 20px;
+    /* Add some space between columns */
+  }
+  
+  /* Logo styles */
+  .logo img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  /* Social icons styles */
+  .widget_social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .widget_social li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .widget_social li:last-child {
+    margin-right: 0;
+  }
+  
+  .widget_social a {
+    color: #fbfbfb;
+    font-size: 20px;
+  }
+  
+  /* Address and contact styles */
+  .footer-content p {
+    margin-bottom: 10px;
+  }
+  
+  /* Opening hours styles */
+  .opening_time {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .opening_time li {
+    margin-bottom: 5px;
+  }
+  
+  /* Subscribe form styles */
+  .subscribe_form {
+    margin-top: 20px;
+  }
+  
+  .subscribe_form input[type="email"],
+  .subscribe_form button[type="submit"] {
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    /* Make inputs and button full width */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in width */
+    margin-bottom: 10px;
+    /* Add some space between inputs and button */
+  }
+  
+  .subscribe_form button[type="submit"] {
+    background-color: #958475;
+    color: #fbfbfb;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscribe_form button[type="submit"]:hover {
+    filter: brightness(80%);
+  }
+  
+  /* Subscription result styles */
+  #subscribe-result p {
+    margin: 5px 0;
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (min-width: 768px) {
+    .col-md-4 {
+      width: 30%;
+      /* Reset width for larger screens */
+      margin-bottom: 0;
+      /* Remove margin bottom for larger screens */
+    }
+  }
+  
