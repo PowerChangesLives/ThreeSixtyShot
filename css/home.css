@@ -1,16 +1,24 @@
- /* Reset default margin and padding */
+  /* Reset default margin and padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  background-color: #ede5e2;
+}
+
 /* This is for the header */
 header {
   background-color: #232328;
-  padding: 30px 20px;
+  padding: 20px 20px;
   width: 100%;
   position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 /* This is for the navigation */
@@ -106,6 +114,11 @@ nav {
 }
 
 /* hero section */ 
+.hero {
+  margin-top: 100px;
+}
+
+
 .hero__container {
   background-image: url(https://placehold.co/1280x420);
   background-repeat: no-repeat;
@@ -316,6 +329,10 @@ footer {
     /* Remove margin bottom for larger screens */
   }
 }
+
+
+
+
 
 
 
