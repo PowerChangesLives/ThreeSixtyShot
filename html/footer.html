@@ -1,160 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-    <style>
-      /* Footer styles */
-      footer {
-        background-color: #232328;
-        color: #fbfbfb;
-        padding: 30px 15px;
-        /* Adjust padding for smaller screens */
-      }
-
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      .col-md-4 {
-        width: 100%;
-        /* Full width for smaller screens */
-        margin-bottom: 20px;
-        /* Add some space between columns */
-      }
-
-      /* Logo styles */
-      .logo img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 15px;
-      }
-
-      /* Social icons styles */
-      .widget_social {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .widget_social li {
-        display: inline-block;
-        margin-right: 10px;
-      }
-
-      .widget_social li:last-child {
-        margin-right: 0;
-      }
-
-      .widget_social a {
-        color: #fbfbfb;
-        font-size: 20px;
-      }
-
-      /* Address and contact styles */
-      .footer-content p {
-        margin-bottom: 10px;
-      }
-
-      /* Opening hours styles */
-      .opening_time {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .opening_time li {
-        margin-bottom: 5px;
-      }
-
-      /* Subscribe form styles */
-      .subscribe_form {
-        margin-top: 20px;
-      }
-
-      .subscribe_form input[type="email"],
-      .subscribe_form button[type="submit"] {
-        padding: 10px;
-        font-size: 14px;
-        width: 100%;
-        /* Make inputs and button full width */
-        box-sizing: border-box;
-        /* Ensure padding and border are included in width */
-        margin-bottom: 10px;
-        /* Add some space between inputs and button */
-      }
-
-      .subscribe_form button[type="submit"] {
-        background-color: #958475;
-        color: #fbfbfb;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      .subscribe_form button[type="submit"]:hover {
-        filter: brightness(80%);
-      }
-
-      /* Subscription result styles */
-      #subscribe-result p {
-        margin: 5px 0;
-      }
-
-      /* Media query for smaller screens */
-      @media screen and (min-width: 768px) {
-        .col-md-4 {
-          width: 30%;
-          /* Reset width for larger screens */
-          margin-bottom: 0;
-          /* Remove margin bottom for larger screens */
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <footer>
-      <div class="container">
-        <div class="col-md-4">
-          <img src="image.png" alt="Company Logo">
+<footer>
+  <div class="container">
+      <div class="col-md-4">
+          <img src="../images/logo.jpg" alt="Company Logo" width="150" height="50">
+          <br>
           <h3>Headquarters</h3>
           <p>403 Welsh Place, Morris Plains, NJ 07959</p>
           <p>Email: info@threesixtyshot.com</p>
           <p>Phone: 973-370-3543</p>
-        </div>
-        <div class="col-md-4">
-          <h3>Opening Hours</h3>
-          <ul class="opening_time">
-            <li>Monday - Friday 8:00am - 8:00pm</li>
-            <li>Saturday - Sunday 9:30am - 10:00pm</li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h3>Subscribe to ThreeSixtyShot</h3>
-          <form action="#" class="subscribe_form">
-            <input type="email" name="EMAIL" id="subs-email" class="form_input" placeholder="Email Address...">
-            <button type="submit" class="submit">SUBSCRIBE</button>
-            <div class="clearfix"></div>
-            <div id="subscribe-result">
-              <p class="subscription-success"></p>
-              <p class="subscription-error"></p>
-              <ul class="widget_social">
-                <li><a href="#"><i class="social_facebook"></i></a>Facebook</li>
-                <li><a href="#"><i class="social_twitter"></i></a>Twitter</li>
-                <li><a href="#"><i class="social_instagram"></i></a>Instagram</li>
-                <li><a href="#"><i class="social_linkedin"></i></a>LinkedIn</li>
-              </ul>
-            </div>
-          </form>
-        </div>
       </div>
-    </footer>
-  </body>
+      <div class="col-md-4">
+          <h3>Opening Hours</h3>
+          <br>
+          <ul class="opening_time">
+              <li>Monday - Friday 8:00am - 8:00pm</li>
+              <li>Saturday - Sunday 9:30am - 10:00pm</li>
+          </ul>
+      </div>
+      <div class="col-md-4">
+          <h3>Subscribe to ThreeSixtyShot</h3>
+          <form action="#" class="subscribe_form" id="subscribeForm">
+              <input type="email" name="EMAIL" id="emailInput" class="form_input" placeholder="Email Address...">
+              <button type="submit" class="submit">SUBSCRIBE</button>
+              <div class="clearfix"></div>
+              <div id="subscribe-result">
+                  <p class="subscription-success"></p>
+                  <p class="subscription-error"></p>
+                  <ul class="widget_social">
+                      <li><a href="#"><i class="social_facebook"></i></a>Facebook</li>
+                      <li><a href="#"><i class="social_twitter"></i></a>Twitter</li>
+                      <li><a href="#"><i class="social_instagram"></i></a>Instagram</li>
+                      <li><a href="#"><i class="social_linkedin"></i></a>LinkedIn</li>
+                  </ul>
+              </div>
+          </form>
+      </div>
+  </div>
+</footer>
 
-</html>
+
+<!-- JavaScript for subscription form -->
+<script>
+  document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      var email = document.getElementById('emailInput').value;
+
+      // Perform validation here if needed
+
+      // For demonstration purposes, simply log the email to the console
+      console.log('Subscribed with email:', email);
+
+      // You can also send the email to a server using AJAX to handle the subscription
+      // Example:
+      // fetch('/subscribe', {
+      //   method: 'POST',
+      //   body: JSON.stringify({ email: email }),
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   }
+      // })
+      // .then(response => {
+      //   if (response.ok) {
+      //     console.log('Subscription successful');
+      //   } else {
+      //     console.error('Subscription failed');
+      //   }
+      // })
+      // .catch(error => {
+      //   console.error('Error:', error);
+      // });
+  });
+</script>
