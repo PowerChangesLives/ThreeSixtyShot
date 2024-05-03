@@ -1,150 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
-    <style>
-      /* Reset default margin and padding */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* This is for the header */
-      header {
-        background-color: #232328;
-        padding: 30px 20px;
-        width: 100%;
-        position: fixed;
-      }
-
-      /* This is for the navigation */
-      nav {
-        display: flex;
-        flex-direction: column;
-      }
-
-      /* This is for the logo*/
-      .logo img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      /* This is for the menu */
-      .menu {
-        list-style: none;
-        margin-top: 20px;
-      }
-
-      .menu li {
-        margin-bottom: 10px;
-      }
-
-      .menu li a {
-        color: #fbfbfb;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-
-      /* This is for the sub menus*/
-      .menu ul {
-        display: none;
-        background-color: #958475;
-        list-style: none;
-        padding-left: 20px;
-      }
-
-      .menu li:hover>ul {
-        display: block;
-      }
-
-      .menu ul li {
-        margin-bottom: 5px;
-      }
-
-      .menu ul li a {
-        color: #fbfbfb;
-        text-decoration: none;
-      }
-
-
-
-      /* This is for the header button (reservation button) */
-      .header-btn {
-        margin-top: 20px;
-      }
-
-      .header-btn a {
-        padding: 10px 20px;
-        background-color: #958475;
-        color: #232328;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-      }
-
-      .header-btn a:hover {
-        background-color: #958475;
-      }
-
-      /* Media queries added for mobile responsiveness */
-      @media screen and (min-width: 768px) {
-        nav {
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .menu {
-          display: flex;
-          margin-top: 0;
-        }
-
-        .menu li {
-          margin-bottom: 0;
-          margin-right: 20px;
-        }
-
-        .header-btn {
-          margin-top: 0;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <a href="#"><img src="image.png" alt="company logo"></a>
-        </div>
-        <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Photobooth Rentals</a>
-            <ul>
-              <li><a href="#">Holiday</a></li>
-              <li><a href="#">Wedding</a></li>
-              <li><a href="#">Special Events</a></li>
-              <li><a href="#">Corporate</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">FAQs</a></li>
+<!-- Code used for header scross website -->
+<header>
+  <nav>
+    <div class="logo">
+      <a href="home.html"><img src="image.png" alt="company logo"></a>
+    </div>
+    <ul class="menu">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about_us.html">About</a></li>
+      <li><a href="#">Photobooth Rentals</a>
+        <ul>
+          <li><a href="holiday.html">Holiday</a></li>
+          <li><a href="wedding.html">Wedding</a></li>
+          <li><a href="special-events.html">Special Events</a></li>
+          <li><a href="corporate.html">Corporate</a></li>
         </ul>
-        <div class="header-btn">
-          <a href="#" class="menu-btn">Book a Reservation</a>
-        </div>
-      </nav>
-    </header>
+      </li>
+      <li><a href="Pricing.html">Pricing</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="Contact_us.html">Contact</a></li>
+      <li><a href="fa">FAQs</a></li>
+    </ul>
+    <div class="header-btn">
+      <a href="reserve.html" class="menu-btn">Book a Reservation</a>
+    </div>
+  </nav>
+</header> <!-- .header-section -->
 
-  </body>
-
-</html>
+  
