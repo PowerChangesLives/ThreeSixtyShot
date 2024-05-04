@@ -229,6 +229,15 @@ h2{
   animation: slideIn 2s forwards; /* Animation properties */
 }
 
+@keyframes slideIn {
+  0% {
+      left: -100%; /* Move text outside the viewport */
+  }
+  100% {
+      left: 0; /* Slide text to the left */
+  }
+}
+
 
 /* Footer styles */
 footer {
