@@ -62,7 +62,7 @@
                 <fieldset>
                     <legend>Schedule Reservation</legend>
                     <label for="date">Reservation Date</label>
-                    <input type="date" id="date" name="date-of-reservation" min="" max=""/>
+                    <input type="date" id="date" name="date-of-reservation" min="2024-05-04" max="2025-05-04">
                     <label for="reservation-time">Time</label>
                     <input type="time" id="reservation-time" name="reservationTime">
                     <label for="reservation-type">Package</label>
@@ -179,6 +179,8 @@
                 //   console.error('Error:', error);
                 // });
             });
+            // Set min attribute for date input to current date
+            document.getElementById('date').min = new Date().toISOString().split('T')[0];
         </script>
         <script src="../jsController/reserve.js"></script>
     </body>
