@@ -221,6 +221,14 @@ h2{
   height: auto;
 }
 
+/*Animated H2*/
+.animated-text {
+  font-size: 36px;
+  position: relative;
+  left: -100%; /* Start text outside the viewport */
+  animation: slideIn 2s forwards; /* Animation properties */
+}
+
 
 /* Footer styles */
 footer {
