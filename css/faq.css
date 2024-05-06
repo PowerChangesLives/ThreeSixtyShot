@@ -191,6 +191,11 @@
   #about {
     text-align: center;
   }
+
+  main {
+  padding-bottom: 95px;
+  padding-top: 10px;
+  }
   
   
   
@@ -225,6 +230,7 @@
 .accordion {
     max-width: 600px;
     margin: 0 auto;
+    padding-top: 20px;
   }
   
   .accordion-item {
