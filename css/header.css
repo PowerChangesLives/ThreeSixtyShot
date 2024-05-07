@@ -39,6 +39,16 @@ nav {
   transition: color 0.3s ease;
 }
 
+.submenu-parent:hover .submenu {
+  display: block;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #fbfbfb; /* Adjust as needed */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 
+
 
 /* This is for the sub menus*/
 .menu ul {
