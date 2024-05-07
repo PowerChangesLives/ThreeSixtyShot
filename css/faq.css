@@ -186,6 +186,11 @@
   h2{
     text-align: center;
   }
+
+  main {
+  padding-bottom: 95px;
+  padding-top: 10px;
+  }
   
   /* About section */
   #about {
