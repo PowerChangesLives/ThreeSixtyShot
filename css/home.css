@@ -181,6 +181,7 @@ section {
   border: 1px solid #ccc;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 h2{
@@ -219,6 +220,23 @@ h2{
 .about-image img {
   max-width: 100%;
   height: auto;
+}
+
+/*Animated H2*/
+.animated-text {
+  font-size: 36px;
+  position: relative;
+  left: -100%; /* Start text outside the viewport */
+  animation: slideIn 2s forwards; /* Animation properties */
+}
+
+@keyframes slideIn {
+  0% {
+      left: -100%; /* Move text outside the viewport */
+  }
+  100% {
+      left: 0; /* Slide text to the left */
+  }
 }
 
 

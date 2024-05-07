@@ -1,4 +1,4 @@
- /* Reset default margin and padding CSS for faq*/
+ /* Reset default margin and padding */
  * {
     margin: 0;
     padding: 0;
@@ -191,11 +191,6 @@
   #about {
     text-align: center;
   }
-
-  main {
-  padding-bottom: 95px;
-  padding-top: 10px;
-  }
   
   
   
@@ -226,31 +221,18 @@
     height: auto;
   }
 
-  /* Accordian Styles */
-.accordion {
-    max-width: 600px;
-    margin: 0 auto;
-    padding-top: 20px;
-  }
-  
-  .accordion-item {
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .accordion-title {
-    background-color: #f4f4f4;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .accordion-content {
-    display: none;
-    padding: 10px;
-  }
-  
-  .accordion-content.active {
-    display: block;
-  }
+  .service {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.service h2 {
+    margin-top: 0;
+}
+.service p {
+    margin-bottom: 0;
+}
   
   
   

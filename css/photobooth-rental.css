@@ -114,7 +114,7 @@ nav {
   }
 }
 
-/* hero section */ 
+/* hero section */
 .hero {
   margin-top: 110px;
 }
@@ -134,7 +134,7 @@ nav {
   justify-content: center;
 }
 
-.sub-title { 
+.sub-title {
   font-size: 30px;
   color: #958475;
 }
@@ -144,7 +144,7 @@ nav {
   padding-top: 10px;
   text-align: center;
 }
-/* hero ends */ 
+/* hero ends */
 
 button {
   padding: 10px 20px; /* Add padding to the button */
@@ -176,13 +176,13 @@ html {
 
 .row {
   display: flex;
-  justify-content: space-between; 
-  margin-bottom: 5px; 
+  justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 section {
   flex: 1;
-  margin: 15px; 
+  margin: 15px;
   padding: 20px;
   border: 1px solid #ccc;
   background-color: #fff;
@@ -190,6 +190,10 @@ section {
 }
 
 h2{
+  text-align: center;
+}
+
+h3{
   text-align: center;
 }
 
