@@ -61,6 +61,17 @@ nav {
   text-decoration: none;
 }
 
+.submenu-parent:hover .submenu {
+  display: block;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #fbfbfb; /* Adjust as needed */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust as needed */
+}
+
 
 
 /* This is for the header button (reservation button) */
