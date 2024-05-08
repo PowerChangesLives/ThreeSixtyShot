@@ -174,26 +174,35 @@ html {
   background-color: #D9D4D0;
 }
 
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .row {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 5px;
 }
 
-section {
+.event-box{
   flex: 1;
   margin: 15px;
   padding: 20px;
   border: 1px solid #ccc;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  height: 85%;
+  text-align: justify;
 }
-
-h2{
+.event-box h3{
+  margin-bottom: 8px;
   text-align: center;
 }
 
-h3{
+h2{
   text-align: center;
 }
 
