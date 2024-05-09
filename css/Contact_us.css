@@ -232,7 +232,73 @@ h2{
   height: auto;
 }
 
-/*Form Styles*/
+/* Contact form styles */
+
+/* Contact Form Title */
+.contact-form-container h1 {
+  text-align: center;
+  margin-bottom: 30px; /* Keep margin-bottom as it is */
+}
+
+/* Form container */
+.contact-form-container {
+  margin: 20px auto; /* Add margin to create space around the form */
+  padding: 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  align-items: center;
+  display: flex; /* Make the form container a flex container */
+  flex-wrap: wrap; /* Allow form elements to wrap */
+  justify-content: space-between; /* Space between elements */
+}
+
+
+/* Form fields container */
+.contact-form-container .row {
+  margin-bottom: 20px;
+  flex: 0 0 calc(50% - 10px); /* Set width of form elements to 50% */
+}
+
+/* Form labels */
+.contact-form-container label {
+  font-weight: bold;
+}
+
+/* Form inputs */
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"],
+.contact-form-container input[type="tel"],
+.contact-form-container textarea {
+  width: calc(100% - 22px); /* Set width to match the desired length */
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+/* Form button */
+.contact-form-container button[type="submit"] {
+  background-color: #9e8a78;
+  color: #fbfbfb;
+  border: none;
+  padding: 10px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px; /* Add margin to separate button from inputs */
+}
+
+.contact-form-container button[type="submit"]:hover {
+  filter: brightness(80%);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 767px) {
+  .contact-form-container .row {
+    flex: 0 0 100%; /* Set width of form elements to 100% on smaller screens */
+  }
+}
 
 
 
