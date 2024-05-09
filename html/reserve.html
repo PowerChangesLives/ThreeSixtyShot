@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="../images/favicon.png">
+        <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+        <link rel="stylesheet" href="../css/reserve.css">
+        <title>THREESIXTYSHOT | Reservation</title>
+    </head>
+    <body>
+        <header>
+
+            <nav>
+              <div class="logo">
+                <a href="index.html"><img src="../images/logo.jpg" alt="company logo" width="100" height="50"></a>
+              </div>
+              <ul class="menu">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#">Photobooth Rentals</a>
+                    <ul>
+                        <li><a href="holiday.html">Holiday</a></li>
+                        <li><a href="wedding.html">Wedding</a></li>
+                        <li><a href="special-events.html">Special Events</a></li>
+                        <li><a href="corporate.html">Corporate</a></li>
+                    </ul>
+                </li>
+                <li><a href="Pricing.html">Pricing</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="Contact_us.html">Contact</a></li>
+            </ul>
+            <div class="header-btn">
+                <a href="reserve.html" class="menu-btn">Book a Reservation</a>
+            </div>
+        </nav>
+    </header> <!-- .header-section -->
+
+      
+          <section class="hero">
+              <div class="hero__container">
+                  <h4 class="sub-title">Trendy Machine For Any Event</h4>
+                  <h2 class="title">Welcome to THREESIXTYSHOT Photobooth</h2>
+              </div>
+          </section>
+      
+        <main>
+            <h1>Reserve</h1>
+            <article>
+                <h2>Welcome to the THREESIXTYSHOT's Reservation Page</h2>
+                <p>Welcome to ThreeSixtyShot's Reservations Page, where securing your 360° video booth for your next event is just a few clicks away! We understand the importance of capturing special moments, and we are thrilled to make the reservation process as convenient and seamless as possible for you.</p>
+            </article>
+            <aside>
+                <h2>Make a Reservation</h2>
+                <p>To reserve your 360° video booth, simply select the date and time for your event on the interactive calendar below. Our intuitive system allows you to choose the availability that best suits your schedule, ensuring that your special day is covered with our immersive videography services. Once you've selected your desired date and time, proceed to fill out the form with your contact information and event details.</p>
+                <p>Your reservation request will be immediately sent to our team at ThreeSixtyShot, who will promptly review and confirm the availability of the booth for your event. Our dedicated staff will work closely with you to finalize all order details, ensuring that everything is in place for a seamless and unforgettable experience for you and your guests.</p>
+                <p>Reserve your date and time now to ensure that your upcoming event is immortalized with the magic of 360° videography by ThreeSixtyShot. Let's make your reservation today and create memories that will last a lifetime.</p>
+            </aside>
+            <form id="reservationForm" onsubmit="submitForm(event)">
+                <h2>Reservation Form</h2>
+                <fieldset>
+                    <legend>Schedule Reservation</legend>
+                    <label for="date">Reservation Date</label>
+                    <input type="date" id="date" name="date-of-reservation" min="2024-05-04" max="2025-05-04">
+                    <label for="reservation-time">Time</label>
+                    <input type="time" id="reservation-time" name="reservationTime">
+                    <label for="reservation-type">Package</label>
+                    <select id="reservation-type">
+                        <option value="basic">Basic Package</option>
+                        <option value="premium">Premium Package</option>
+                        <option value="corporate">Corporate</option>
+                    </select>
+                </fieldset>
+                <!-- Use javascript to grey out unavailable times -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fName">First Name</label>
+                    <input type="text" id="fName" name="clientFirstName" required>
+
+                    <label for="lName">Last Name</label>
+                    <input type="text" id="lName" name="clientLastName" required>
+
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="clientPhone">
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="clientEmail" required>
+
+                    <label for="request">Special Request</label>
+                    <textarea id="request" name="specialRequest"></textarea>
+                </fieldset>
+                <button type="submit">Book a reservation</button>
+                <!-- Use a program to parse the information in form -->
+            </form>
+
+            <div id="thankYouMessage" class="hidden">
+                <h2>Thank You!</h2>
+                <p>Your reservation has been submitted.</p>
+            </div>
+            <div id="secondResBtn" class="hidden" onclick="showForm()"><button>Create Another Reservation</button></div>
+            <aside>
+                <h2>Our Commitment To You</h2>
+                <p>At ThreeSixtyShot, we prioritize professionalism, efficiency, and personalized service. We recognize that every event is unique, and we are committed to tailoring our videography services to meet your specific needs and preferences. Whether you're planning a birthday celebration, a wedding, a corporate event, or any other special occasion, our team is here to support you every step of the way.</p>
+                <p>By reserving a 360° video booth with ThreeSixtyShot, you are not just securing a service; you are investing in a premium experience that will elevate your event to new heights. Our state-of-the-art technology and expertise in immersive videography ensure that every moment is captured with precision and artistry, allowing you to relive the magic of your event for years to come.</p>
+                <p>Thank you for choosing ThreeSixtyShot for your event videography needs. We are excited to be a part of your special day and to help you create memories that will last a lifetime. Take the first step towards securing your reservation by selecting your date and time below, and let us handle the rest. We look forward to working with you to make your event truly unforgettable.</p>
+            </aside>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="col-md-4">
+                    <img src="../images/logo.jpg" alt="Company Logo" width="150" height="50">
+                    <br>
+                    <h3>Headquarters</h3>
+                    <p>403 Welsh Place, Morris Plains, NJ 07959</p>
+                    <p>Email: info@threesixtyshot.com</p>
+                    <p>Phone: 973-370-3543</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Opening Hours</h3>
+                    <br>
+                    <ul class="opening_time">
+                        <li>Monday - Friday 8:00am - 8:00pm</li>
+                        <li>Saturday - Sunday 9:30am - 10:00pm</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Subscribe to ThreeSixtyShot</h3>
+                    <form action="#" class="subscribe_form" id="subscribeForm">
+                        <input type="email" name="EMAIL" id="emailInput" class="form_input" placeholder="Email Address...">
+                        <button type="submit" class="submit">SUBSCRIBE</button>
+                        <div class="clearfix"></div>
+                        <div id="subscribe-result">
+                            <p class="subscription-success"></p>
+                            <p class="subscription-error"></p>
+                            <ul class="widget_social">
+                                <li><a href="#"><i class="social_facebook"></i></a>Facebook</li>
+                                <li><a href="#"><i class="social_twitter"></i></a>Twitter</li>
+                                <li><a href="#"><i class="social_instagram"></i></a>Instagram</li>
+                                <li><a href="#"><i class="social_linkedin"></i></a>LinkedIn</li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </footer>
+    
+    
+        <!-- JavaScript for subscription form -->
+        <script>
+            document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting
+    
+                var email = document.getElementById('emailInput').value;
+    
+                // Perform validation here if needed
+    
+                // For demonstration purposes, simply log the email to the console
+                console.log('Subscribed with email:', email);
+    
+                // You can also send the email to a server using AJAX to handle the subscription
+                // Example:
+                // fetch('/subscribe', {
+                //   method: 'POST',
+                //   body: JSON.stringify({ email: email }),
+                //   headers: {
+                //     'Content-Type': 'application/json'
+                //   }
+                // })
+                // .then(response => {
+                //   if (response.ok) {
+                //     console.log('Subscription successful');
+                //   } else {
+                //     console.error('Subscription failed');
+                //   }
+                // })
+                // .catch(error => {
+                //   console.error('Error:', error);
+                // });
+            });
+        </script>
+        <script src="../jsController/reserve.js"></script>
+    </body>
+</html>

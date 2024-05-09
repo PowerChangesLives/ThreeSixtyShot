@@ -1,0 +1,73 @@
+<footer>
+  <div class="container">
+      <div class="col-md-4">
+          <img src="../images/logo.jpg" alt="Company Logo" width="150" height="50">
+          <br>
+          <h3>Headquarters</h3>
+          <p>403 Welsh Place, Morris Plains, NJ 07959</p>
+          <p>Email: info@threesixtyshot.com</p>
+          <p>Phone: 973-370-3543</p>
+      </div>
+      <div class="col-md-4">
+          <h3>Opening Hours</h3>
+          <br>
+          <ul class="opening_time">
+              <li>Monday - Friday 8:00am - 8:00pm</li>
+              <li>Saturday - Sunday 9:30am - 10:00pm</li>
+          </ul>
+      </div>
+      <div class="col-md-4">
+          <h3>Subscribe to ThreeSixtyShot</h3>
+          <form action="#" class="subscribe_form" id="subscribeForm">
+              <input type="email" name="EMAIL" id="emailInput" class="form_input" placeholder="Email Address...">
+              <button type="submit" class="submit">SUBSCRIBE</button>
+              <div class="clearfix"></div>
+              <div id="subscribe-result">
+                  <p class="subscription-success"></p>
+                  <p class="subscription-error"></p>
+                  <ul class="widget_social">
+                      <li><a href="#"><i class="social_facebook"></i></a>Facebook</li>
+                      <li><a href="#"><i class="social_twitter"></i></a>Twitter</li>
+                      <li><a href="#"><i class="social_instagram"></i></a>Instagram</li>
+                      <li><a href="#"><i class="social_linkedin"></i></a>LinkedIn</li>
+                  </ul>
+              </div>
+          </form>
+      </div>
+  </div>
+</footer>
+
+
+<!-- JavaScript for subscription form -->
+<script>
+  document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      var email = document.getElementById('emailInput').value;
+
+      // Perform validation here if needed
+
+      // For demonstration purposes, simply log the email to the console
+      console.log('Subscribed with email:', email);
+
+      // You can also send the email to a server using AJAX to handle the subscription
+      // Example:
+      // fetch('/subscribe', {
+      //   method: 'POST',
+      //   body: JSON.stringify({ email: email }),
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   }
+      // })
+      // .then(response => {
+      //   if (response.ok) {
+      //     console.log('Subscription successful');
+      //   } else {
+      //     console.error('Subscription failed');
+      //   }
+      // })
+      // .catch(error => {
+      //   console.error('Error:', error);
+      // });
+  });
+</script>
