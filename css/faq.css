@@ -4,11 +4,11 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     background-color: #ede5e2;
   }
-  
+
   /* This is for the header */
   header {
     background-color: #232328;
@@ -20,37 +20,37 @@
     left: 0;
     z-index: 1000;
   }
-  
+
   /* This is for the navigation */
   nav {
     display: flex;
     flex-direction: column;
   }
-  
+
   /* This is for the logo*/
   .logo img {
     max-width: 100%;
     height: auto;
     padding-top: 13px;
   }
-  
+
   /* This is for the menu */
   .menu {
     list-style: none;
     margin-top: 20px;
   }
-  
+
   .menu li {
     margin-bottom: 10px;
   }
-  
+
   .menu li a {
     color: #fbfbfb;
     text-decoration: none;
     transition: color 0.3s ease;
   }
-  
-  
+
+
   /* This is for the sub menus*/
   .menu ul {
     display: none;
@@ -58,15 +58,15 @@
     list-style: none;
     padding-left: 20px;
   }
-  
+
   .menu li:hover>ul {
     display: block;
   }
-  
+
   .menu ul li {
     margin-bottom: 5px;
   }
-  
+
   .menu ul li a {
     color: #fbfbfb;
     text-decoration: none;
@@ -82,14 +82,14 @@
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust as needed */
 }
-  
-  
-  
+
+
+
   /* This is for the header button (reservation button) */
   .header-btn {
     margin-top: 20px;
   }
-  
+
   .header-btn a {
     padding: 10px 20px;
     background-color: #958475;
@@ -97,11 +97,11 @@
     text-decoration: none;
     transition: background-color 0.3s ease;
   }
-  
+
   .header-btn a:hover {
     background-color: #958475;
   }
-  
+
   /* Media queries added for mobile responsiveness */
   @media screen and (min-width: 768px) {
     nav {
@@ -109,28 +109,28 @@
       justify-content: space-between;
       align-items: center;
     }
-  
+
     .menu {
       display: flex;
       margin-top: 0;
     }
-  
+
     .menu li {
       margin-bottom: 0;
       margin-right: 20px;
     }
-  
+
     .header-btn {
       margin-top: 0;
     }
   }
-  
-  /* hero section */ 
+
+  /* hero section */
   .hero {
     margin-top: 100px;
   }
-  
-  
+
+
   .hero__container {
     background-image: url(https://placehold.co/1280x420);
     background-repeat: no-repeat;
@@ -138,24 +138,24 @@
     background-size: cover;
     height: 40vh;
     width: 100%;
-  
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  
-  .sub-title { 
+
+  .sub-title {
     font-size: 20px;
     color: #958475;
   }
-  
+
   .title {
     font-size: 40px;
     padding-top: 10px;
   }
-  /* hero ends */ 
-  
+  /* hero ends */
+
   button {
     padding: 10px 20px; /* Add padding to the button */
     font-size: 16px; /* Adjust font size as needed */
@@ -165,73 +165,65 @@
     cursor: pointer; /* Add cursor pointer on hover */
     transition: background-color 0.3s ease; /* Smooth transition for background color change */
   }
-  
+
   button:hover {
     filter: brightness(80%); /* Change button background color on hover */
   }
-  
+
   /* General Body Styles */
   html {
     font-family: century-gothic;
   }
-  
+
   .body {
     background-color: #D9D4D0;
   }
-  
+
   .row {
     display: flex;
-    justify-content: space-between; 
-    margin-bottom: 5px; 
+    justify-content: space-between;
+    margin-bottom: 5px;
   }
-  
+
   section {
     flex: 1;
-    margin: 15px; 
+    margin: 15px;
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-  
+
   h2{
     text-align: center;
   }
-  
+
   /* About section */
   #about {
     text-align: center;
   }
 
-  main {
-  padding-bottom: 95px;
-  padding-top: 10px;
-  }
-  
-  
-  
-  
-  .row {
-    display: flex;
-    justify-content: space-between;
-  }
-  
+
+
+
+
+
   .column {
     float: left;
     width: 48%; /* Adjust width as needed */
   }
-  
+
   /* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
-  
+
   .about-content {
     text-align: left;
   }
-  
+
   .about-image img {
     max-width: 100%;
     height: auto;
@@ -239,32 +231,82 @@
 
   /* Accordian Styles */
 .accordion {
-    max-width: 600px;
+    max-width: 85%;
     margin: 0 auto;
-    padding-top: 20px;
+    padding: 20px;
   }
-  
+
   .accordion-item {
     border-bottom: 1px solid #ccc;
   }
-  
+
   .accordion-title {
     background-color: #f4f4f4;
     padding: 10px;
     cursor: pointer;
   }
-  
+
   .accordion-content {
     display: none;
     padding: 10px;
   }
-  
+
   .accordion-content.active {
     display: block;
   }
-  
-  
-  
+  input {
+    display: none;
+}
+
+label {
+    display: block;
+    padding: 8px 22px;
+    margin: 0 0 1px 0;
+    cursor: pointer;
+    background: #ccc;
+    border-radius: 3px;
+    color: #000000;
+    transition: ease .5s;
+    position: relative; /* ADDING THIS IS REQUIRED */
+}
+
+label:hover {
+    background: #fff;
+}
+
+label::after {
+    content: '+';
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+
+input:checked + label::after {
+    content: '-';
+    right: 14px;
+    top: 3px;
+}
+
+.accordion-content {
+    background: #fff;
+    padding: 10px 25px;
+    border: 1px solid #A7A7A7;
+    margin: 0 0 1px 0;
+    border-radius: 3px;
+}
+
+input + label + .accordion-content {
+    display: none;
+}
+
+input:checked + label + .accordion-content {
+    display: block;
+}
+
+
+
   /* Footer styles */
   footer {
     background-color: #232328;
@@ -272,69 +314,69 @@
     padding: 30px 15px;
     /* Adjust padding for smaller screens */
   }
-  
+
   .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
+
   .col-md-4 {
     width: 100%;
     /* Full width for smaller screens */
     margin-bottom: 20px;
     /* Add some space between columns */
   }
-  
+
   /* Logo styles */
   .logo img {
     max-width: 100%;
     height: auto;
     margin-bottom: 15px;
   }
-  
+
   /* Social icons styles */
   .widget_social {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
   .widget_social li {
     display: inline-block;
     margin-right: 10px;
   }
-  
+
   .widget_social li:last-child {
     margin-right: 0;
   }
-  
+
   .widget_social a {
     color: #fbfbfb;
     font-size: 20px;
   }
-  
+
   /* Address and contact styles */
   .footer-content p {
     margin-bottom: 10px;
   }
-  
+
   /* Opening hours styles */
   .opening_time {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
   .opening_time li {
     margin-bottom: 5px;
   }
-  
+
   /* Subscribe form styles */
   .subscribe_form {
     margin-top: 20px;
   }
-  
+
   .subscribe_form input[type="email"],
   .subscribe_form button[type="submit"] {
     padding: 10px;
@@ -346,7 +388,7 @@
     margin-bottom: 10px;
     /* Add some space between inputs and button */
   }
-  
+
   .subscribe_form button[type="submit"] {
     background-color: #958475;
     color: #fbfbfb;
@@ -354,16 +396,16 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
+
   .subscribe_form button[type="submit"]:hover {
     filter: brightness(80%);
   }
-  
+
   /* Subscription result styles */
   #subscribe-result p {
     margin: 5px 0;
   }
-  
+
   /* Media query for smaller screens */
   @media screen and (min-width: 768px) {
     .col-md-4 {
@@ -373,8 +415,8 @@
       /* Remove margin bottom for larger screens */
     }
   }
-  
-  
-  
-  
-  
+
+
+
+
+
