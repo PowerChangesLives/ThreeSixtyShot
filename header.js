@@ -1,13 +1,12 @@
-const navEl = document.querySelector(".nav");
-const hambergerEl = document.querySelector(".hamburger");
+document.addEventListener("DOMContentLoaded", function () {
+                const hamburger = document.querySelector(".hamburger");
+                const nav = document.querySelector(".nav");
 
-
-hambergerEl.addEventListener("click", () => {
-    navEl.classList.toggle("nav--open");
-    hambergerEl.classList.toggle("hamburger--open")
-});
-
-navEl.addEventListener('click', () => {
-    navEl.classList.remove("nav--open");
-    hambergerEl.classList.remove("hamburger--open");
-})
+                // Add click event listener to hamburger menu
+                hamburger.addEventListener("click", function () {
+                    // Toggle the 'active' class on each bar of hamburger
+                    hamburger.querySelectorAll('.bar').forEach(bar => bar.classList.toggle('active'));
+                    // Toggle the 'active' class on the navigation
+                    nav.classList.toggle("active");
+                });
+            });
