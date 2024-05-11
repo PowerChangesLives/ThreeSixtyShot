@@ -1,4 +1,4 @@
-import {sendReservationTo360Email} from 'modelJS/nodeMailer.js';
+import {phpMailer} from 'phpMailer.php';
 
 document.addEventListener('DOMContentLoaded', function() {
     const dateInput = document.getElementById('date');

@@ -1,4 +1,4 @@
-import {sendContactTo360Email} from "../modelJS/nodeMailer";
+import {sendContactTo360Email} from "../model/nodeMailer";
 
 document.addEventListener('DOMContentLoaded', function() {
 
