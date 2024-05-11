@@ -1,4 +1,4 @@
-import {phpMailer} from 'phpMailer.php';
+import {sendEmail} from 'phpMailer.php';
 
 document.addEventListener('DOMContentLoaded', function() {
     const dateInput = document.getElementById('date');
@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // });
 });
 
+
+
 function submitForm(event) {
     event.preventDefault();
 
@@ -45,9 +47,8 @@ function submitForm(event) {
     );
 
     //Submit the form
-    // For example, you can send the form data to a server using AJAX or fetch API
-    // Here, I'm calling the nodeMailer to forward the information to the 360 email because I couldn't find any info on the iPage website about an API end to use fetch()
-    sendReservationTo360Email(ReservationDataObject);
+    // Here, I'm calling the phpMailer to forward the information to the 360 email because I couldn't find any info on the iPage website about an API end to use fetch()
+    sendEmail(ReservationDataObject.fName, ReservationDataObject.email, ReservationDataObject);
 
 
     // Log form information
