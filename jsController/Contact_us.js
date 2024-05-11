@@ -24,15 +24,18 @@ document.addEventListener('DOMContentLoaded', function() {
             "Message from Contact: " + message;
 
         // Send AJAX request to PHP script
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '../model/phpMailer.php', true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        console.log("Starting: // Send AJAX request to PHP script (Line 27")
+
+        var xmlHttpRequest = new XMLHttpRequest();
+        xmlHttpRequest.open('POST', '../model/phpMailer.php', true);
+        xmlHttpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        xmlHttpRequest.onreadystatechange = function() {
+            if (xmlHttpRequest.readyState === XMLHttpRequest.DONE && xmlHttpRequest.status === 200) {
                 // Handle successful response
-                console.log(xhr.responseText);
+                console.log(xmlHttpRequest.responseText);
                 // Simulate response
-                response.innerText = `Thank you, ${name}! We have received your message.`;
+                response.innerText = `Thank you, ${fName}! We have received your message.`;
                 form.reset();
                 const formElements = document.querySelectorAll('.contact-form');
                 formElements.forEach(element => {
@@ -40,7 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         };
-        xhr.send('name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&message=' + encodeURIComponent(messageBody));
+
+        xmlHttpRequest.send('name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&message=' + encodeURIComponent(messageBody));
 
         console.log("Attempting to send the contact message: " + "\n\n" + "Message: " + messageBody)
     });
