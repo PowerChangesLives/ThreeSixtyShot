@@ -13,7 +13,8 @@ function sendContactEmail($name, $email, $message) {
 
     // SMTP settings
     $smtpServer = 'smtp.ipage.com'; //Per iPage support, this info was obtained from https://www.ipage.com/help/article/email-client-setup-outlook-2016-and-microsoft-365
-    $smtpPort = 465; // Use the appropriate SMTP port (465 is what is listed at the above address from iPage)
+    $smtpPort = 587; // Use the appropriate SMTP port (465 is what is listed at the above address from iPage for SSL connection)
+    //Change smtp port to 465 once we set up SSL
     $smtpUsername = 'info@threesixtyshot.com'; // Change this to your SMTP username
     $smtpPassword = 'Jeremiah2720!'; // Change this to your SMTP password
 

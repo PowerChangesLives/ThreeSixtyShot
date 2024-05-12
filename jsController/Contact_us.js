@@ -26,10 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Send AJAX request to PHP script
         console.log("Starting: // Send AJAX request to PHP script (Line 27")
 
+
         var xmlHttpRequest = new XMLHttpRequest();
         xmlHttpRequest.open('POST', '../model/phpMailer.php', true);
         xmlHttpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
+        const response = document.getElementById('response');
         xmlHttpRequest.onreadystatechange = function() {
             if (xmlHttpRequest.readyState === XMLHttpRequest.DONE && xmlHttpRequest.status === 200) {
                 // Handle successful response
