@@ -19,8 +19,8 @@ function sendContactEmail($name, $email, $message) {
     $smtpPassword = 'Jeremiah2720!'; // Change this to your SMTP password
 
     // PHPMailer library initialization
-    require 'PHPMailer/PHPMailer.php';
-    require 'PHPMailer/SMTP.php';
+    require 'model/PHPMailer/src/PHPMailer.php';
+    require 'model/PHPMailer/src/SMTP.php';
 
     $mail = new PHPMailer\PHPMailer\PHPMailer();
     $mail->isSMTP();
