@@ -5,8 +5,8 @@
 //Get values from form
 $fName = $_POST["first_name"];
 $lName = $_POST["last_name"];
-$email = $_POST["email_addr"];
-$phone = $_POST["phone_input"];
+$email = $_POST["email"];
+$phone = $_POST["Phone"];
 //$subject = $_POST["Message from Contact Form"];
 $message_input = $_POST["message"];
 
@@ -19,7 +19,7 @@ use PHPMailer\PHPMailer\SMTP;
 
 $mail = new PHPMailer(true);
 
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+//$mail->SMTPDebug = SMTP::DEBUG_SERVER; //Deactivate this line when not debugging. It causes secret info to show in the browser.
 
 $mail->isSMTP();
 $mail->SMTPAuth = true;

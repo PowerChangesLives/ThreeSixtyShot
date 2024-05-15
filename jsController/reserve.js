@@ -1,4 +1,4 @@
-import {sendEmail} from 'phpMailer.php';
+import {sendEmail} from 'sendContactUsForm.php';
 
 document.addEventListener('DOMContentLoaded', function() {
     const dateInput = document.getElementById('date');

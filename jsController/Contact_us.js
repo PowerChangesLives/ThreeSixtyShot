@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Line 24: Starting AJAX request to PHPMailer script");
         //
         // var xmlHttpRequest = new XMLHttpRequest();
-        // xmlHttpRequest.open('POST', '../model/phpMailer.php', true);
+        // xmlHttpRequest.open('POST', '../model/sendContactUsForm.php', true);
         // xmlHttpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         //
         // xmlHttpRequest.onreadystatechange = function() {
