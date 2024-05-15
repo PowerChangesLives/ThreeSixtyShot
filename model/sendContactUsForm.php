@@ -104,5 +104,5 @@ try {
     echo "An error occurred. Please try again later.";
 }
 
-echo "email sent";
-//header("Location: sent.html");
+//echo "email sent";
+header("Location: ../html/sent.html");
