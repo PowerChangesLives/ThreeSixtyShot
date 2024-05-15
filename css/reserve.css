@@ -71,6 +71,17 @@
     color: #fbfbfb;
     text-decoration: none;
   }
+
+.submenu-parent:hover .submenu {
+  display: block;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #fbfbfb; /* Adjust as needed */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust as needed */
+}
   
   
   
@@ -220,6 +231,90 @@
     max-width: 100%;
     height: auto;
   }
+
+ /* Main Container */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+/* Form Styles */
+form {
+  flex: 1 1 100%;
+  margin-top: 40px;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #958475;
+  color: #fbfbfb;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  filter: brightness(80%);
+}
+
+/* Thank You Message */
+#thankYouMessage {
+  display: none;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+/* Additional Reservations Button */
+#secondResBtn {
+  flex: 1 1 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#secondResBtn button {
+  padding: 10px 20px;
+  background-color: #958475;
+  color: #fbfbfb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#secondResBtn button:hover {
+  filter: brightness(80%);
+}
+
+
   
   
   /* Footer styles */
@@ -330,6 +425,10 @@
       /* Remove margin bottom for larger screens */
     }
   }
+  
+  
+  
+
   
   
   

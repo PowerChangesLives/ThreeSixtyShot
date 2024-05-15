@@ -72,6 +72,17 @@ nav {
   text-decoration: none;
 }
 
+.submenu-parent:hover .submenu {
+  display: block;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #fbfbfb; /* Adjust as needed */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust as needed */
+}
+
 
 
 /* This is for the header button (reservation button) */
@@ -114,7 +125,7 @@ nav {
   }
 }
 
-/* hero section */ 
+/* hero section */
 .hero {
   margin-top: 100px;
 }
@@ -134,7 +145,7 @@ nav {
   justify-content: center;
 }
 
-.sub-title { 
+.sub-title {
   font-size: 20px;
   color: #958475;
 }
@@ -143,7 +154,7 @@ nav {
   font-size: 40px;
   padding-top: 10px;
 }
-/* hero ends */ 
+/* hero ends */
 
 button {
   padding: 10px 20px; /* Add padding to the button */
@@ -170,21 +181,73 @@ html {
 
 .row {
   display: flex;
-  justify-content: space-between; 
-  margin-bottom: 5px; 
+  justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 section {
   flex: 1;
-  margin: 15px; 
+  margin: 15px;
   padding: 20px;
   border: 1px solid #ccc;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.contact-form-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mb-5-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.contact-us-message{
+  flex: 1;
+  margin: 15px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  height: 95%;
+  text-align:left;
+}
+.contact-us-message h2 {
+ margin-bottom: 10px;
+  text-align:left ;
+  margin-top: 30px;
+
+}
+.contact-us-message p{
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+
+.col{
+  width: 100%;
+  /* Full width for smaller screens */
+  margin-bottom: 20px;
+  /* Add some space between columns */
+  flex: 1;
+}
+
+
 
 h2{
   text-align: center;
+}
+/* Media query for smaller screens */
+@media screen and (min-width: 768px) {
+  .col {
+    width: 30%;
+    /* Reset width for larger screens */
+    margin-bottom: 0;
+    /* Remove margin bottom for larger screens */
+  }
 }
 
 /* About section */
@@ -221,7 +284,59 @@ h2{
   height: auto;
 }
 
-/*Form Styles*/
+/* Contact form styles */
+
+/* Contact Form Title */
+.contact-form-container h1 {
+  text-align: center;
+  margin-bottom: 30px; /* Keep margin-bottom as it is */
+}
+
+/* Form fields container */
+.contact-form-container .row {
+  margin-bottom: 20px;
+  flex: 0 0 calc(50% - 10px); /* Set width of form elements to 50% */
+}
+
+/* Form labels */
+.contact-form-container label {
+  font-weight: bold;
+}
+
+/* Form inputs */
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"],
+.contact-form-container input[type="tel"],
+.contact-form-container textarea {
+  width: calc(100% - 22px); /* Set width to match the desired length */
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+/* Form button */
+.contact-form-container button[type="submit"] {
+  background-color: #9e8a78;
+  color: #fbfbfb;
+  border: none;
+  padding: 10px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px; /* Add margin to separate button from inputs */
+}
+
+.contact-form-container button[type="submit"]:hover {
+  filter: brightness(80%);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 767px) {
+  .contact-form-container .row {
+    flex: 0 0 100%; /* Set width of form elements to 100% on smaller screens */
+  }
+}
 
 
 
@@ -303,7 +418,7 @@ footer {
   /* Make inputs and button full width */
   box-sizing: border-box;
   /* Ensure padding and border are included in width */
-  margin-bottom: 10px;
+
   /* Add some space between inputs and button */
 }
 

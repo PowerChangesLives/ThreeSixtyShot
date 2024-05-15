@@ -72,6 +72,17 @@ nav {
   text-decoration: none;
 }
 
+.submenu-parent:hover .submenu {
+  display: block;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #fbfbfb; /* Adjust as needed */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust as needed */
+}
+
 
 
 /* This is for the header button (reservation button) */
@@ -116,7 +127,7 @@ nav {
 
 /* hero section */
 .hero {
-  margin-top: 110px;
+  margin-top: 100px;
 }
 
 
@@ -174,12 +185,6 @@ html {
   background-color: #D9D4D0;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-
 section {
   flex: 1;
   margin: 15px;
@@ -188,14 +193,39 @@ section {
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.event-box{
+  flex: 1;
+  margin: 15px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  height: 85%;
+  text-align: justify;
+}
+.event-box h3{
+  margin-bottom: 8px;
+  text-align: center;
+}
+
 
 h2{
   text-align: center;
 }
 
-h3{
-  text-align: center;
-}
 
 /* About section */
 #about {

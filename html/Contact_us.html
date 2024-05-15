@@ -13,9 +13,10 @@
 
     <title>ThreeSixtyShot | Contact Us</title>
 
-    
+
 </head>
 <body>
+<<<<<<< HEAD
     <header>
         <nav>
 
@@ -45,117 +46,186 @@
 
         </nav>
     </header> <!-- .header-section -->
+=======
+<header>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="../images/logo.jpg" alt="company logo" width="100" height="50"></a>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li class="submenu-parent">
+                <a href="#">Photobooth Rentals</a>
+                <ul class="submenu">
+                    <li><a href="holiday.html">Holiday</a></li>
+                    <li><a href="wedding.html">Wedding</a></li>
+                    <li><a href="special-events.html">Special Events</a></li>
+                    <li><a href="corporate.html">Corporate</a></li>
+                </ul>
+            </li>
+            <li><a href="Pricing.html">Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="Contact_us.html">Contact</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="reserve.html" class="menu-btn">Book a Reservation</a>
+        </div>
+    </nav>
+</header> <!-- .header-section -->
 
-  
-      <section class="hero">
-          <div class="hero__container">
-              <h4 class="sub-title">Trendy Machine For Any Event</h4>
-              <h2 class="title">Welcome to THREESIXTYSHOT Photobooth</h2>
-          </div>
-      </section>
-    
-  
-    <div class="container">
-        <h1>Contact Us</h1>
 
-        <div class="contact-container">
-            <div class="contact-form" id="contact-form">
-                <form action="/submit_contact" method="post">
-                    <label for="name" class="label">Name:</label>
-                    <input type="text" id="name" name="name" required>
+<section class="hero">
+    <div class="hero__container">
+        <h4 class="sub-title">Trendy Machine For Any Event</h4>
+        <h2 class="title">Welcome to THREESIXTYSHOT Photobooth</h2>
+    </div>
+</section>
 
-                    <label for="email" class="label">Email:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="message" class="label">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-
-                    <button type="submit" id="contactSubmitButton">Submit</button>
-                </form>
+<section class="contact-us-section">
+    <div class="contact-form-container">
+        <div class="mb-5-row">
+            <div class="col">
+                <div class="contact-us-message">
+                    <div class="logo">
+                        <a><img src="../images/logo.jpg" alt="company logo" width="100" height="50"></a>
+                    </div>
+                    <h2>Contact us</h2>
+                    <p>At 360° Photobooth, we understand the significance of every event, and we are committed to exceeding your expectations.
+                        Thank you for reaching out to us ! we appreciate your interest and will get back to you as soon as possible. we're looking
+                        forward to assisting you with anything you need.  </p>
+                    <h3>403 Welsh Place<br></h3>
+                    <h3>Morris Plains, NJ 07959<br></h3>
+                    <br>
+                    <h4>Email: info@threesixtyshot.com</h4>
+                    <h4>phone:(973)370-3543</h4>
+                </div>
             </div>
-            <div id="response"></div>
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                <p>Address: 403 Welsh Place, Morris Plains, NJ 07559</p>
-                <p>Phone: (973) 370-3543</p>
-                <p>Email: info@threesixtyshot.com</p>
+>>>>>>> all_team_branch
+
+            <div class="col">
+                <div class="contact-us-message">
+                    <form id="contact_form" name="contact_form" method="post" class="contact_form" action="../model/sendContactUsForm.php">
+                        <div class="mb-5-row">
+                            <div class="col">
+                                <label>First Name</label>
+                                <br>
+                                <input type="text" required maxlength="50" class="form-control" id="first_name"
+                                       name="first_name">
+                            </div>
+                            <div class="col">
+                                <label>Last Name</label>
+                                <br>
+                                <input type="text" required maxlength="50" class="form-control" id="last_name" name="last_name">
+                            </div>
+                        </div>
+                        <div class="mb-5-row">
+                            <div class="col">
+                                <label for="email_addr">Email address</label>
+                                <br>
+                                <input type="email" required maxlength="50" class="form-control" id="email_addr" name="email"
+                                       placeholder="name@example.com">
+                            </div>
+                            <div class="col">
+                                <label for="phone_input">Phone</label>
+                                <br>
+                                <input type="tel" required maxlength="50" class="form-control" id="phone_input" name="Phone"
+                                       placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <label for="message">Message</label>
+                            <br>
+                            <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary px-4 btn-lg">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+    <div id="response"></div>
 
-    <footer>
-        <div class="container">
-            <div class="col-md-4">
-                <img src="../images/logo.jpg" alt="Company Logo" width="150" height="50">
-                <br>
-                <h3>Headquarters</h3>
-                <p>403 Welsh Place, Morris Plains, NJ 07959</p>
-                <p>Email: info@threesixtyshot.com</p>
-                <p>Phone: 973-370-3543</p>
-            </div>
-            <div class="col-md-4">
-                <h3>Opening Hours</h3>
-                <br>
-                <ul class="opening_time">
-                    <li>Monday - Friday 8:00am - 8:00pm</li>
-                    <li>Saturday - Sunday 9:30am - 10:00pm</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h3>Subscribe to ThreeSixtyShot</h3>
-                <form action="#" class="subscribe_form" id="subscribeForm">
-                    <input type="email" name="EMAIL" id="emailInput" class="form_input" placeholder="Email Address...">
-                    <button type="submit" class="submit">SUBSCRIBE</button>
-                    <div class="clearfix"></div>
-                    <div id="subscribe-result">
-                        <p class="subscription-success"></p>
-                        <p class="subscription-error"></p>
-                        <ul class="widget_social">
-                            <li><a href="#"><i class="social_facebook"></i></a>Facebook</li>
-                            <li><a href="#"><i class="social_twitter"></i></a>Twitter</li>
-                            <li><a href="#"><i class="social_instagram"></i></a>Instagram</li>
-                            <li><a href="#"><i class="social_linkedin"></i></a>LinkedIn</li>
-                        </ul>
-                    </div>
-                </form>
-            </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="col-md-4">
+            <img src="../images/logo.jpg" alt="Company Logo" width="150" height="50">
+            <br>
+            <h3>Headquarters</h3>
+            <p>403 Welsh Place, Morris Plains, NJ 07959</p>
+            <p>Email: info@threesixtyshot.com</p>
+            <p>Phone: 973-370-3543</p>
         </div>
-    </footer>
+        <div class="col-md-4">
+            <h3>Opening Hours</h3>
+            <br>
+            <ul class="opening_time">
+                <li>Monday - Friday 8:00am - 8:00pm</li>
+                <li>Saturday - Sunday 9:30am - 10:00pm</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>Subscribe to ThreeSixtyShot</h3>
+            <form action="#" class="subscribe_form" id="subscribeForm">
+                <input type="email" name="EMAIL" id="emailInput" class="form_input" placeholder="Email Address...">
+                <button type="submit" class="submit">SUBSCRIBE</button>
+                <div class="clearfix"></div>
+                <div id="subscribe-result">
+                    <p class="subscription-success"></p>
+                    <p class="subscription-error"></p>
+                    <ul class="widget_social">
+                        <li><a href="#"><i class="social_facebook"></i></a>Facebook</li>
+                        <li><a href="#"><i class="social_twitter"></i></a>Twitter</li>
+                        <li><a href="#"><i class="social_instagram"></i></a>Instagram</li>
+                        <li><a href="#"><i class="social_linkedin"></i></a>LinkedIn</li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+</footer>
 
 
-    <!-- JavaScript for subscription form -->
-    <script>
-        document.getElementById('subscribeForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting
 
-            var email = document.getElementById('emailInput').value;
 
-            // Perform validation here if needed
+<!-- JavaScript for subscription form -->
+<script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting
 
-            // For demonstration purposes, simply log the email to the console
-            console.log('Subscribed with email:', email);
+        var email = document.getElementById('emailInput').value;
 
-            // You can also send the email to a server using AJAX to handle the subscription
-            // Example:
-            // fetch('/subscribe', {
-            //   method: 'POST',
-            //   body: JSON.stringify({ email: email }),
-            //   headers: {
-            //     'Content-Type': 'application/json'
-            //   }
-            // })
-            // .then(response => {
-            //   if (response.ok) {
-            //     console.log('Subscription successful');
-            //   } else {
-            //     console.error('Subscription failed');
-            //   }
-            // })
-            // .catch(error => {
-            //   console.error('Error:', error);
-            // });
-        });
-    </script>
+        // Perform validation here if needed
+
+        // For demonstration purposes, simply log the email to the console
+        console.log('Subscribed with email:', email);
+
+        // You can also send the email to a server using AJAX to handle the subscription
+        // Example:
+        // fetch('/subscribe', {
+        //   method: 'POST',
+        //   body: JSON.stringify({ email: email }),
+        //   headers: {
+        //     'Content-Type': 'application/json'
+        //   }
+        // })
+        // .then(response => {
+        //   if (response.ok) {
+        //     console.log('Subscription successful');
+        //   } else {
+        //     console.error('Subscription failed');
+        //   }
+        // })
+        // .catch(error => {
+        //   console.error('Error:', error);
+        // });
+    });
+</script>
+<!--<script src="../jsController/Contact_us.js"></script> -->
+
 </body>
 </html>
-

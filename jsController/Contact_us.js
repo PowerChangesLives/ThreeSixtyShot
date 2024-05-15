@@ -1,53 +1,63 @@
-import {sendContactTo360Email} from "../modelJS/nodeMailer";
-
 document.addEventListener('DOMContentLoaded', function() {
-
-
-    // Access the form element
-    var form = document.querySelector('.contact-form form');
+    var form = document.querySelector('.contact_form');
     const response = document.getElementById('response');
 
-    // Add event listener for form submission
     form.addEventListener('submit', function(event) {
-        // Prevent the default form submission behavior
         event.preventDefault();
 
-        // Validate form inputs
-        var name = document.getElementById('name').value.trim();
-        var email = document.getElementById('email').value.trim();
+        var fName = document.getElementById('first_name').value.trim();
+        var lName = document.getElementById('last_name').value.trim();
+        var email = document.getElementById('email_addr').value.trim();
+        var phone = document.getElementById('phone_input').value.trim();
         var message = document.getElementById('message').value.trim();
 
-
-        // If all fields are filled, you can proceed with form submission
-        if (name === '' || email === '' || message === '') {
+        if (fName === '' || lName === '' || email === '' || message === '' || phone === '') {
+            console.error('Error: Please fill in all fields.'); // Log error message
             alert('Please fill in all fields.');
             return;
         }
 
+        var name = fName + " " + lName;
+        var messageBody = "Someone used the 'contact us' form:" + "\n\n\n" +
+            "Name: " + fName + " " + lName + "\n\n" +
+            "Contact phone: " + phone + "\n\n" +
+            "Contact email: " + email + "\n\n" +
+            "Message from Contact: " + message;
 
-        // For example, you can send the form data to a server using AJAX or fetch API
-        // Here, I'm calling the nodeMailer to forward the information to the 360 email because I couldn't find any info on the iPage website about an API end to use fetch()
-        const ContactFormData = new ContactFormDataObject(name, email, message);
-        sendContactTo360Email(ContactFormData);
+        // Send AJAX request to PHP script
+        console.log("Line 24: Starting AJAX request to PHPMailer script");
+        //
+        // var xmlHttpRequest = new XMLHttpRequest();
+        // xmlHttpRequest.open('POST', '../model/sendContactUsForm.php', true);
+        // xmlHttpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        //
+        // xmlHttpRequest.onreadystatechange = function() {
+        //     if (xmlHttpRequest.readyState === XMLHttpRequest.DONE) {
+        //         if (xmlHttpRequest.status === 200) {
+        //             // Handle successful response
+        //             console.log("Line 33: AJAX request successful");
+        //             console.log(xmlHttpRequest.responseText);
+        //             response.innerText = `Thank you, ${fName}! We have received your message.`;
+        //             form.reset();
+        //             const formElements = document.querySelectorAll('.contact-form');
+        //             formElements.forEach(element => {
+        //                 element.classList.add('hidden');
+        //             });
+        //         } else {
+        //             console.error('Line 41: Error occurred during AJAX request:', xmlHttpRequest.status);
+        //             alert('An error occurred while submitting the form. Please try again later.');
+        //         }
+        //     }
+        // };
+        //
+        // xmlHttpRequest.onerror = function() {
+        //     console.error('Line 51: Network error occurred during AJAX request');
+        //     alert('Network error occurred. Please try again later.');
+        // };
+        //
+        // xmlHttpRequest.send('name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&message=' + encodeURIComponent(messageBody));
 
-
-
-
-        // Simulating form submission (replace with actual AJAX request)
-        setTimeout(() => {
-            response.textContent = `Thank you, ${name}! We have received your message.`;
-            form.reset();
-
-            // Hide form elements
-            const formElements = document.querySelectorAll('#contact-form');
-            formElements.forEach(element => {
-                element.classList.add('hidden');
-            });
-
-        }, 1000);
-
-
-
+        console.log("Line 57: Attempting to send the contact message:");
+        console.log("Line 58: Message: " + messageBody);
     });
 });
-
