@@ -41,8 +41,11 @@ $mail->Host = "in-v3.mailjet.com";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 587;
 
-$mail->Username = "29a8cc0e54108d4b255d8b756e43029c";
-$mail->Password = "4b97de100e950defe66ce3c4a7fa9ba1";
+$mail->Username = "#GetFromPWDocument";//I removed the API key and Secret Key for security purposes.
+// Get them from the document that has all the project passwords in the sharepoint.
+$mail->Password = "#GetFromPWDocument";//I removed the API key and Secret Key for security purposes.
+// Get them from the document that has all the project passwords in the sharepoint.
+
 
 //Combine form data into the correct format to send
 
