@@ -8,6 +8,19 @@
   body {
     background-color: #ede5e2;
   }
+
+ .responsive-image-container {
+   width: 100%;
+   max-width: 600px; /* Optional: Set a max-width for demonstration */
+   overflow: hidden;
+ }
+
+ .responsive-image-container img {
+   width: 100%;
+   height: auto;
+   display: block; /* Remove any extra space below the image */
+   object-fit: cover; /* Maintains aspect ratio and covers the container */
+ }
   
   /* This is for the header */
   header {
@@ -248,10 +261,10 @@
     gap: 20px; /* Add space between images */
 }
 
-.gallery__container__list img {
-    width: 440px; /* Set width of each image */
-    height: 600px; /* Set height of each image */
-}
+/*.gallery__container__list img {*/
+/*    width: 440px; !* Set width of each image *!*/
+/*    height: 600px; !* Set height of each image *!*/
+/*}*/
 
 
   .gallery__videos {
