@@ -127,17 +127,17 @@ nav {
 
 /* hero section */
 .hero {
-  margin-top: 100px;
+  margin-top: 81px;
+  margin-bottom: 80px;
 }
 
 
 .hero__container {
-  background-image: url(https://placehold.co/1280x420);
+  background-image: url(https://github.com/PowerChangesLives/ThreeSixtyShot/blob/all_team_branch/images/special-event-hero.jpeg?raw=true);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 40vh;
-  width: 100%;
+  height: 54vh;
 
   display: flex;
   flex-direction: column;
@@ -154,6 +154,7 @@ nav {
   font-size: 20px;
   padding-top: 10px;
   text-align: center;
+  color: #fff;
 }
 /* hero ends */
 
@@ -171,10 +172,6 @@ button:hover {
   filter: brightness(80%); /* Change button background color on hover */
 }
 
-.cta {
-  text-align: center;
-  padding-bottom: 10px;
-}
 
 /* General Body Styles */
 html {
@@ -185,14 +182,6 @@ html {
   background-color: #D9D4D0;
 }
 
-section {
-  flex: 1;
-  margin: 15px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
 .container1 {
   display: flex;
   flex-wrap: wrap;
@@ -224,6 +213,32 @@ section {
 
 h2{
   text-align: center;
+}
+
+.ctacontainer {
+  background-image: url(https://github.com/PowerChangesLives/ThreeSixtyShot/blob/all_team_branch/images/book-now-cta.jpeg?raw=true);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+  margin-top: 80px;
+}
+.cta {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+
+.cta p {
+  font-weight: 900;
+  font-size: 18px;
 }
 
 
