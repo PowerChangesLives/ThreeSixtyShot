@@ -3,42 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THREESIXTYSHOTS | Corporate</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="../css/photobooth-rental.css">
     <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+    <link rel="stylesheet" href="../css/header.css">
     <!-- Add Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <title>ThreeSixtyShot | Corporate</title>
-
+    
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="../images/logo.jpg" alt="company logo" width="100" height="50"></a>
+    <header class="header">
+        <div class="header_content">
+            <a href="index.html" class="nav_link logo"><img src="../images/logo.jpg" alt="company logo" width="100" height="50"></a>
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="index.html" class="nav_link">Home</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="about_us.html" class="nav_link">About</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="services.html" class="nav_link">Services</a>
+                    </li>
+                    <li class="nav_item" style="color: #fbfbfb;">
+                        <a href="#">Photobooth Rentals</a>
+                        <ul class="submenu">
+                            <li><a href="holiday.html">Holiday</a></li>
+                            <li><a href="wedding.html">Wedding</a></li>
+                            <li><a href="special-events.html">Special Events</a></li>
+                            <li><a href="corporate.html">Corporate</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav_item">
+                        <a href="pricing.html" class="nav_link">Pricing</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="gallery.html" class="nav_link">Gallery</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="faq.html.html" class="nav_link">FAQs</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="Contact_us.html" class="nav_link">Contact</a>
+                    </li>
+                    <li class="nav_item">
+                        <div class="header-btn">
+                            <a href="reserve.html" class="menu-btn">Book a Reservation</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li class="submenu-parent">
-                    <a href="#">Photobooth Rentals</a>
-                    <ul class="submenu">
-                        <li><a href="holiday.html">Holiday</a></li>
-                        <li><a href="wedding.html">Wedding</a></li>
-                        <li><a href="special-events.html">Special Events</a></li>
-                        <li><a href="corporate.html">Corporate</a></li>
-                    </ul>
-                </li>
-                <li><a href="Pricing.html">Pricing</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="faq.html">FAQs</a></li>
-                <li><a href="Contact_us.html">Contact</a></li>
-            </ul>
-            <div class="header-btn">
-                <a href="reserve.html" class="menu-btn">Book a Reservation</a>
-            </div>
-        </nav>
+        </div>
     </header> <!-- .header-section -->
 
 
@@ -135,14 +157,12 @@
             </div>
         </section>
 
-        <div class="ctacontainer">
-            <div class="cta">
-                <p>Elevate the visual storytelling of your corporate events with our cutting-edge 360° video booth and
+        <div class="cta">
+            <p>Elevate the visual storytelling of your corporate events with our cutting-edge 360° video booth and
                 create a lasting impression on attendees and stakeholders. Contact us today to book this innovative technology
                 and bring a new dimension to the documentation and sharing of your corporate event experiences.</p>
-                    <button class="rental-button" onclick="window.location.href='reserve.html'">Book Now</button>
+                <button class="rental-button" onclick="window.location.href='reserve.html'">Book Now</button>
             </div>
-        </div>
     </main>
 
     <footer>
@@ -218,8 +238,13 @@
             // });
         });
     </script>
+    <script src="../controller/header.js"></script>
 </body>
 </html>
+
+
+
+
 
 
 
