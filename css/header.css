@@ -1,84 +1,119 @@
 /* This is for the header */
-header {
-  background-color: #232328;
-  padding: 15px 20px;
-  width: 100%;
-  position: fixed;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* This is for the navigation */
-nav {
-  display: flex;
-  flex-direction: column;
-}
-
-/* This is for the logo*/
-.logo img {
-  max-width: 100%;
-  height: auto;
-  padding-top: 13px;
-}
-
-/* This is for the menu */
-.menu {
+ul {
   list-style: none;
-  margin-top: 20px;
 }
 
-.menu li {
-  margin-bottom: 10px;
-}
-
-.menu li a {
-  color: #fbfbfb;
+a {
   text-decoration: none;
-  transition: color 0.3s ease;
+  color: inherit;
 }
 
-.submenu-parent:hover .submenu {
-  display: block;
+body {
+  background-color: #e8f0f7;
+  height: 500px;
+  padding-top: 60px;
 }
-.submenu {
+
+.header {
+  background-color: #232328;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.header_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  min-height: 60px;
+}
+
+.nav {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav_list {
+  display: flex;
+  column-gap: 40px;
+}
+
+.nav_list ul {
   display: none;
-  position: absolute;
-  background-color: #fbfbfb; /* Adjust as needed */
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust as needed */
-}
-
-
-/* This is for the sub menus*/
-.menu ul {
-  display: none;
-  background-color: #958475;
+  background-color: #232328;
   list-style: none;
   padding-left: 20px;
 }
 
-.menu li:hover>ul {
+.nav_list li:hover>ul {
   display: block;
 }
 
-.menu ul li {
+.nav_list ul li {
   margin-bottom: 5px;
 }
 
-.menu ul li a {
+.nav_list ul li a {
   color: #fbfbfb;
   text-decoration: none;
 }
 
-
-
-/* This is for the header button (reservation button) */
-.header-btn {
-  margin-top: 20px;
+.nav_link {
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.4s;
 }
 
+.nav_link:hover,
+.nav_link:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #fbfbfb;
+  /* Adjust as needed */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Adjust as needed */
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  height: 2px;
+  width: 27px;
+  background-color: white;
+  margin: 5px 0;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Added styles for active state */
+.bar.active {
+  transform: rotate(45deg);
+  background-color: #fff;
+}
+
+.bar.active:nth-child(2) {
+  transform: scaleX(0);
+}
+
+.bar.active:last-child {
+  transform: rotate(-45deg);
+  background-color: #fff;
+}
+
+/* reservation button */
 .header-btn a {
   padding: 10px 20px;
   background-color: #958475;
@@ -91,25 +126,33 @@ nav {
   background-color: #958475;
 }
 
-/* Media queries added for mobile responsiveness */
-@media screen and (min-width: 768px) {
-  nav {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+/* mobile responsiveness */
+@media(max-width: 650px) {
+  .nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      background-color: rgb(19, 22, 26);
+      width: 100%;
+      padding: 10px 0 25px;
+      transform: translateX(-100%);
   }
 
-  .menu {
-    display: flex;
-    margin-top: 0;
+  .nav.active {
+      transform: translateX(0%);
   }
 
-  .menu li {
-    margin-bottom: 0;
-    margin-right: 20px;
+  .nav_list {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
   }
 
-  .header-btn {
-    margin-top: 0;
+  .nav_link {
+      font-size: 14px;
+  }
+
+  .hamburger {
+      display: block;
   }
 }

@@ -57,16 +57,16 @@
         </p>
     </section>
     <section>
-        <form id="reservationForm" onsubmit="submitForm(event)">
+        <form id="reservationForm" name="reservationForm" method="post" action="../model/sendReserveForm.php">
             <h2>Reservation Form</h2>
             <fieldset>
                 <legend>Schedule Reservation</legend>
                 <label for="date">Reservation Date</label>
-                <input type="date" id="date" name="date-of-reservation" min="2024-05-04" max="2025-05-04">
+                <input type="date" id="date" name="date" min="2024-05-04" max="2025-05-04">
                 <label for="reservation-time">Time</label>
-                <input type="time" id="reservation-time" name="reservationTime">
+                <input type="time" id="reservation-time" name="reservation-time">
                 <label for="reservation-type">Package</label>
-                <select id="reservation-type">
+                <select id="reservation-type" name="reservation-type">
                     <option value="basic">Basic Package</option>
                     <option value="premium">Premium Package</option>
                     <option value="corporate">Corporate</option>
@@ -76,19 +76,19 @@
             <fieldset>
                 <legend>Personal Information</legend>
                 <label for="fName">First Name</label>
-                <input type="text" id="fName" name="clientFirstName" required>
+                <input type="text" id="fName" name="fName" required>
     
                 <label for="lName">Last Name</label>
-                <input type="text" id="lName" name="clientLastName" required>
+                <input type="text" id="lName" name="lName" required>
     
                 <label for="phoneNumber">Phone Number</label>
-                <input type="tel" id="phoneNumber" name="clientPhone">
+                <input type="tel" id="phoneNumber" name="phoneNumber">
     
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="clientEmail" required>
+                <input type="email" id="email" name="email" required>
     
                 <label for="request">Special Request</label>
-                <textarea id="request" name="specialRequest"></textarea>
+                <textarea id="request" name="request"></textarea>
             </fieldset>
             <button type="submit">Book a reservation</button>
             <!-- Use a program to parse the information in form -->
@@ -161,39 +161,39 @@
 
 
     <!-- JavaScript for subscription form -->
-    <script>
-        document.getElementById('subscribeForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the form from submitting
+<!--    <script>-->
+<!--        document.getElementById('subscribeForm').addEventListener('submit', function (event) {-->
+<!--            event.preventDefault(); // Prevent the form from submitting-->
 
-            var email = document.getElementById('emailInput').value;
+<!--            var email = document.getElementById('emailInput').value;-->
 
-            // Perform validation here if needed
+<!--            // Perform validation here if needed-->
 
-            // For demonstration purposes, simply log the email to the console
-            console.log('Subscribed with email:', email);
+<!--            // For demonstration purposes, simply log the email to the console-->
+<!--            console.log('Subscribed with email:', email);-->
 
-            // You can also send the email to a server using AJAX to handle the subscription
-            // Example:
-            // fetch('/subscribe', {
-            //   method: 'POST',
-            //   body: JSON.stringify({ email: email }),
-            //   headers: {
-            //     'Content-Type': 'application/json'
-            //   }
-            // })
-            // .then(response => {
-            //   if (response.ok) {
-            //     console.log('Subscription successful');
-            //   } else {
-            //     console.error('Subscription failed');
-            //   }
-            // })
-            // .catch(error => {
-            //   console.error('Error:', error);
-            // });
-        });
-    </script>
-    <script src="../jsController/reserve.js"></script>
+<!--            // You can also send the email to a server using AJAX to handle the subscription-->
+<!--            // Example:-->
+<!--            // fetch('/subscribe', {-->
+<!--            //   method: 'POST',-->
+<!--            //   body: JSON.stringify({ email: email }),-->
+<!--            //   headers: {-->
+<!--            //     'Content-Type': 'application/json'-->
+<!--            //   }-->
+<!--            // })-->
+<!--            // .then(response => {-->
+<!--            //   if (response.ok) {-->
+<!--            //     console.log('Subscription successful');-->
+<!--            //   } else {-->
+<!--            //     console.error('Subscription failed');-->
+<!--            //   }-->
+<!--            // })-->
+<!--            // .catch(error => {-->
+<!--            //   console.error('Error:', error);-->
+<!--            // });-->
+<!--        });-->
+<!--    </script>-->
+   <!-- <script src="../jsController/reserve.js"></script> -->
 </body>
 
 </html>
